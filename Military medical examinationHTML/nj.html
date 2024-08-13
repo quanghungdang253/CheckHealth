@@ -1,0 +1,135 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .Value{
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+            display: none;
+        }
+    </style>
+        <h2> Nhập tên </h2>
+        <input type="text"  id="fullnames" name="" placeholder="nhập tên">
+        <h2> Nhập Tuổi</h2>
+        <input type="number" id="number" name=""  placeholder="nhập tuổi">
+        <button id="button"> Kết quả </button>
+        <div class="Value">
+                    <button id="close">  X </button>
+                    <h1 id="fullname"> </h1>
+
+
+        </div>
+    <script>    
+          
+            document.getElementById("button").onclick = function(){
+                    let fullname = $("#fullnames").val();
+                    $("#fullname").html('<p> Tên của bạn là '+ fullname +'</p>');
+                    $(".Value").slideDown();
+            
+                
+
+            }   
+            document.getElementById("close").onclick = function(){
+                $(".Value").hide(900);
+            }
+             -->
+<!-- 
+        // $(document).ready(function(){
+        //     let currenName = "";
+        //     $("#button").click(function(){
+        //                 let fullname = $("#fullname").val();
+        //                 let number = parseFloat($("#number").val());
+                      
+        //                     if(fullname){
+        //                             if(currenName){
+        //                                     // $(".Value").empty();
+        //                             }
+        //                             $(".Value").append('<p> tôi tên là : ' + fullname +'</p>');
+        //                             console.log(fullname);
+        //                             currenName = fullname;
+
+        //                     }
+                         -->
+                    
+
+               
+        
+                  
+                    
+                    
+            
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+!
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#list-image {
+    width: 100%;
+    height: auto;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    /* transform: translateY(-50%); */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    /* z-index: 1; */
+}
+
+.left {
+    left: 2px;
+}
+
+.right {
+    right: 0;
+}
+
+    </style>
+    <div class="images">
+        <button class="nav-btn left" onclick="Left()"> 🠸 </button>
+        <img id="list-image" src="../Image/Chỉ-số-BMI-4+(3).png" alt="">
+        <button class="nav-btn right" onclick="Right()"> 🠺 </button>
+    </div>
+    
+    
+</body>
+</html>
+    
+      
+   

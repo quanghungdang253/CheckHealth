@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Military medical examinationCSS/main.css">
+    <!-- <link rel="stylesheet" href="../Military medical examinationCSS/Reset.css">
+    <link rel="stylesheet" href="../Military medical examinationCSS/Header.css"> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Document</title>
+</head>
+<body>
+        <div class="Wrapper">
+            <div id="menu">
+                <i class="fa-solid fa-bars"></i>   
+             </div>
+            <div class="main-content"> 
+                <div class="Header-wrapper">
+                    <div class="Header"> 
+                            <form action="https://www.google.com/search">
+                                <input type="text" name="q" id="youtube" class=" btn Fo-input Fo-search" placeholder="Tìm hiểu thêm thông tin tại đây ">
+                                 <button class="btn btn-search"> Search </button>
+                            </form>
+                        <div id="Fo-nav">  
+                            <nav id="nav">
+                            <!-- <button id="close"> ❎ </button> -->
+                                <ul id="nav-list">
+                                     <li>                                    
+                                            <a href="">   <i class="fa-solid fa-house"></i>    Home </a>
+                                    </li>
+                                    <li>
+                                            <a href="">   <i class="fa-brands fa-cc-discover"></i>  Health index </a>
+                                    </li>
+                                    <li>
+                                            <a href="">   <i class="fa-solid fa-blog"></i>  Blog </a>
+                                    </li>
+                                     <li>
+                                            <a href="">   <i class="fa-solid fa-phone"></i> Call </a>
+                                    </li>
+                                    <li>
+                                            <a href="">  <i class="fa-solid fa-bookmark"></i>  Introldufefe </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div> 
+                        
+                    </div>
+
+                    <div class="heading">
+                        <h1> Kiểm tra sức khỏe</h1>
+                    </div>
+                  
+
+                    <div class="Body-header">                      
+                        <div id="Form-input"> 
+                            <div class="label">
+                                <h2>  Nhập thông tin để kiểm tra </h2>
+                            </div> 
+                                <main class="MainTab">   <!-- Thẻ main nơi chứa tài liệu chính -->
+                                    <div class=" formSex"> 
+                                            <div class="title Fo-sex">
+                                                <label for=""> Giới Tính(Sex)  </label>
+                                                <i class="fa-solid fa-children" style="color: #FFD43B;"></i>
+                                            </div>                                                
+                                            <select id="Choose" style="color: #08f018; background-color: #030303;">
+                                                <option value="Nam"> Nam </option>
+                                                <option value="Nữ">  Nữ </option>
+                                            </select>
+                                      
+                                    </div> 
+                                    <div class="Fo-input Fo-username">
+                                        <div class=" title ">
+                                                <label> Họ Tên   </label>                                            
+                                                <i class="fa-solid fa-user" style="color: #FFD43B;"></i>
+                                        </div> 
+                                        <div class="input">
+                                                <input type="text" id="inputName" class="input Name" placeholder="Nhập Họ tên (Enter fullname)"> 
+                                        </div>
+                                                                                           
+                                    </div> 
+
+                                    <div class="Fo-input Fo-username">
+                                        <div class=" title ">
+                                                <label> Tuổi của bạn   </label>                                            
+                                                <i class="fa-solid fa-user" style="color: #FFD43B;"></i>
+                                        </div> 
+                                        <div class="input">
+                                                <input type="number" id="inputAge" class="input Age" placeholder="Nhập Vào tuổi (Enter Age)"> 
+                                        </div>
+                                                                                           
+                                    </div>
+                                      <div class="Fo-input form height">
+                                                <div class="title"> 
+                                                     <label>  Chiều Cao     </label>
+                                                     <i class="fa-solid fa-person" style="color: #FFD43B;"></i> 
+                                                </div>
+                                                <div class=" input "> 
+                                                         <input type="number" id="input-Height" placeholder=" Nhập chiều cao(Enter Height)" > 
+                                                </div>
+                                            
+                                          
+                                     </div>
+                                     <div class="Fo-input  form weight">    
+                                            <div class=" title ">
+                                                 <label>   Cân nặng </label>
+                                                <i class="fa-solid fa-weight-scale" style="color: #FFD43B;"></i>
+                                            </div>
+                                            <div class="input">
+                                                    <input type="number" id="input-Weight" class="input" placeholder=" Nhập cân nặng(Enter weight) ">
+                                            </div>
+                                  
+                                    </div>
+                                    <div class="Fo-input form vongnguc">
+                                                    <div class="title">  
+                                                        <label>  Vòng Ngực  </label>
+                                                        <i class="fa-regular fa-user" style="color: rgb(250, 242, 8);"></i>
+                                                    </div>
+                                                    <div class="input">
+                                                        <input type="number" id="input-Chest"  class="input" name="" placeholder="Vòng ngực(Với nam) ">
+                                                    </div>
+                                         
+                                    </div>
+
+                                    <div class="Fo-input Fo-username">
+                                        <div class=" title ">
+                                                <label> Nhịp Tim  </label>                                            
+                                                <i class="fa-solid fa-user" style="color: #FFD43B;"></i>
+                                        </div> 
+                                        <div class="input">
+                                                <input type="number" id="heartrate" class="heartrate" placeholder=" Nhịp tim(heart rate)lần/phút"> 
+                                        </div>
+                                                                                           
+                                    </div> 
+
+                                    <div class="Fo-input Fo-username">
+                                        <div class=" title ">
+                                                <label> Huyết Áp Tâm thu</label>                                            
+                                                <i class="fa-solid fa-user" style="color: #FFD43B;"></i>
+                                        </div> 
+                                        <div class="input">
+                                                <input type="number" id="Bloodpressure1" class="input Name" placeholder="Huyết Áp Tâm thu(mmHg)"> 
+                                        </div>
+                                                                                           
+                                    </div> 
+                                    <div class="Fo-input Fo-username">
+                                        <div class=" title ">
+                                                <label> Huyết Áp Tâm trương </label>                                            
+                                                <i class="fa-solid fa-user" style="color: #FFD43B;"></i>
+                                        </div> 
+                                        <div class="input">
+                                                <input type="number" id="Bloodpressure2" class="input Name" placeholder="Huyết Áp Tâm Trương(mmHg)"> 
+                                        </div>
+                                                                                           
+                                    </div>
+
+                                    <div class="Fo-input Fo-username">
+                                        <div class=" title ">
+                                                <label> Độ cận   </label>                                            
+                                                <i class="fa-regular fa-eye" style="color: rgb(249, 241, 6);"></i>
+                                        </div> 
+                                        <div class="input">
+                                                <input type="number" id="Myopiadegree" class="input Name" placeholder="Độ cận(Diop)"> 
+                                        </div>
+                                                                                           
+                                    </div> 
+                                <div class="footer-Tab"> 
+                                    <div class="Clause">
+                                            <input type="checkbox"  id="Choose_clause" name="">
+                                            <label> Tôi đồng ý với các điều khoản của Bộ y Tế  </label>
+                                     
+                                    </div>
+                                    <div id="Endofpage">                                        
+                                            <button onclick="Reset()" class="value" > Reset </button>
+                                            <button onclick="output()" id="value"> kết quả </button>
+                                    </div>
+                                 </div>
+                                 </main>
+                             
+     
+                        </div>                  
+                        
+                    </div>
+                    <div class="Wrapper-Result">          <!-- Result : kết quả -->                               
+                        <div class="Result">
+                          <div class="Close">
+                                  <i class="fa-solid fa-xmark"></i>
+                          </div>
+                             <div class="content">  
+                                    <div class="Text fullname"> </div>
+                                    <div class="Text Sex"></div>
+                             </div>
+                              <div class="Text Age"> </div>
+                              <div class="Text Height"></div>
+                              <div class="Text Weight"></div>  
+                              <div class="Text ChestCircle"> </div>     <!-- Chest Cicrle : vòng ngực -->
+                              <div class="Text heartrate"></div>         <!--heart rate : nhịp tim -->
+                              <div class="Text Blood-pressure1"></div>     <!--Blood-pressure : huyết áp tâm thu -->
+                              <div class="Text Blood-pressure2"></div> 
+                              <div class="Text proximity"></div>               <!-- proximity : độ cận-->
+                           
+                            <div class="Conclusion">                    <!-- Conclusion : Kết luận -->
+                                    <div class="Alert">
+                                                    <h2> Kết Luận </h2>
+                                    </div>
+                                    <div class= "Text ReWeight"> </div>
+                                    <div class="Text ReHeartrate"> </div>  <!-- Nhịp tim -->
+                                    <div id="Note" class="Text"> </div>
+                                    <div class="Text Bloodpressure"> </div>
+                                    <div class="Text Myopiadegree"> </div>       <!-- Myopiadegree : Độ cận -->                             
+                            </div>
+                     </div>  
+                                                                 
+                  </div>
+                </div>
+                <div class="Body">   
+                      <div class="images">                                                    
+                                    <button class="Left" onclick="Left()"> <  </button>
+                                        <img  id="list-image" src="" alt="">
+                                    <button class="Right" onclick="Right()"> > </button>                          
+                        </div> 
+                </div>
+            
+            </div>
+            
+        </div>
+      
+
+
+
+    <script src="../Military medical examinationJs/Header.js" defer></script>
+</body>
+</html>

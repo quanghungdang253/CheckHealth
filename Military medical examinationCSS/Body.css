@@ -1,0 +1,44 @@
+
+.Body img{
+       width: 90%;
+       height: 60rem;
+         
+       object-fit: fill;
+
+}
+.Body .images{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+.Body .images .Left{
+     position: relative;
+     left: 4rem;
+}
+.Body .images .Right{
+    position: relative;
+    right: 4rem;
+}
+@media screen and (max-width: 1000px) {
+        
+.Body img{
+  width: 70%;
+  height: 45rem;
+    
+  object-fit: fill;
+
+}
+}
+@media screen and (max-width: 1000px) {
+  .Body img{
+      height: 45rem;
+      object-fit: fill;
+}
+}
+@media screen and (max-width: 700px){
+  .Body img{
+        width: 90%;
+       height: 30rem;
+       object-fit: fill;
+}
+}

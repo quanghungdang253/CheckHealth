@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <style>
+            /* reset lại các thuộc tính  */
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+            #wrapper{
+                max-width: 1170px;
+            }
+            ul {
+                list-style-type: none ;
+            }
+            nav {
+                    background-color: #f57f17;
+                     position: absolute;
+                     right: 0;      
+                
+            }
+            nav #main-menu li a{
+                color: #fff;
+                text-decoration: none;
+                display: block;
+                padding: 8px 15px;
+            }
+            nav #main-menu li a:hover{
+                    background-color: #2196f3;
+                    transition: all 0.3s ease;
+            }
+        
+            #main-menu{
+                display: flex;
+            }
+            #toggle{
+                display: none;
+                background-color: black;
+                color: #fff;
+                text-align: right;
+                padding: 10px;
+                font-size: 20px;
+                cursor: pointer;
+
+            }
+            @media screen and (max-width: 768px) {
+                #main-menu{
+                   
+                    flex-direction: column;
+                    text-align: center;
+                }
+                #toggle{
+                    display: block;
+                }
+                nav{
+                        display: none;
+                }
+            }
+            @media (min-width:768px) {
+                nav{
+                    display: block;
+                   
+                }
+            }
+    </style>
+  
+
+    <div id="wrapper">
+            <div id="header">
+                <div id="toggle">
+                 <i class="fa-solid fa-bars"></i>  
+                </div>
+                <nav id="nav">
+                <ul id="main-menu">
+                    <li>
+                        <a href="">Trang chủ </a>
+                    </li>
+                    <li>
+                        <a href="">Giới thiệu</a>
+                    </li>
+                    <li>
+                        <a href="">Sản phẩm</a>
+                    </li>
+                    <li>
+                        <a href="">Dịch vụ</a>
+                    </li>
+                    <li>
+                        <a href="">Blog</a>
+                    </li>
+                    <li>
+                        <a href="">Liên hệ</a>
+                    </li>
+                </ul>
+                </nav>
+               <p>wfwefwfwefwefew</p>
+            </div>
+         
+       
+    </div>
+    <script src="../Military medical examinationJs/Respondesign.js" defer></script>
+</body>
+</html>
