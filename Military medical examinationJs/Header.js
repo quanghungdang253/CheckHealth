@@ -214,10 +214,10 @@ function Reset(){
 // phần hình ảnh quảng cáo 
 
 let Images = [
-        "../Image/20221104_chi-s0-do-huyet-ap-va-nhip-tim-3.jpg",
-        "../Image/nhip-tim-binh-thuong-5.jpg",
-        "../Image/Chỉ-số-BMI-4+(3).png",
-        "../Image/chi-so-huyet-ap-microlife-1-1024x1024.jpg"
+        "Image/20221104_chi-s0-do-huyet-ap-va-nhip-tim-3.jpg",
+        "Image/nhip-tim-binh-thuong-5.jpg",
+        "Image/Chỉ-số-BMI-4+(3).png",
+        "Image/chi-so-huyet-ap-microlife-1-1024x1024.jpg"
         ]
                
         
