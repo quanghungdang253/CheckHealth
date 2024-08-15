@@ -1,44 +1,132 @@
 
-.Body img{
-       width: 90%;
-       height: 60rem;
-         
-       object-fit: fill;
+html {
+    --font: "Matemasie", sans-serif;
+}
+ .body .wrapper-introlduce{
 
-}
-.Body .images{
-    display: flex;
-    align-items: center;
-    justify-content: center;  
-}
-.Body .images .Left{
-     position: relative;
-     left: 4rem;
-}
-.Body .images .Right{
-    position: relative;
-    right: 4rem;
-}
-@media screen and (max-width: 1000px) {
-        
-.Body img{
-  width: 70%;
-  height: 45rem;
+    padding: 2rem 0rem 2rem 0rem;
+    background-color: black;
+    max-width: 100%;
+    color: white;
+    margin-left: 10rem;
+    margin-right: auto;
     
-  object-fit: fill;
+
+    border: 1px solid white;  
+ }
+.body .wrapper-introlduce .box-information{
+    font-size: 2rem;
+    font-family: "Edu VIC WA NT Beginner", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    display: flex;
+  
+    gap: 10rem;
+    margin-left: 10%;
+
 
 }
+.box-information .image img{
+    max-width: 30rem;
+    border-radius: 990px;
 }
-@media screen and (max-width: 1000px) {
-  .Body img{
-      height: 45rem;
-      object-fit: fill;
+.box-information .image {
+    text-align: center;
 }
+.wrapper-introlduce .box-information .information{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+   max-width: 100%;
 }
-@media screen and (max-width: 700px){
-  .Body img{
-        width: 90%;
-       height: 30rem;
-       object-fit: fill;
+.wrapper-introlduce .box-information .information .function{
+        width: 100%;
+        display: grid;
+        grid-row-gap: 2rem;
+        margin-left: 30rem;
+        
 }
+.wrapper-introlduce .box-information .information .function ol li{
+            margin-bottom: 2rem;
 }
+.wrapper-introlduce .box-information .information h2{
+    font-family: "Matemasie", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 2rem;
+    font-weight: 900;
+    display: inline-block;
+    color: red;
+}
+.wrapper-introlduce .introduce .box{
+
+    font-size: 1.7rem;
+    margin-left: 10%;
+     display: flex;
+     gap: 5rem;
+}
+.wrapper-introlduce .introduce {
+    font-family: var(--font) ;
+    
+}
+.wrapper-introlduce .introduce h1{
+    font-size: 1.5rem;
+    margin-left: 25rem;
+}
+/* ======================================Danh sách hoa quả================================================= */
+.list-foot {
+    background-color: black;
+    margin-top: 10rem;
+    max-width: 100%;
+  
+}
+.list-foot .carrot .text{
+    width: 100%;
+}
+.list-foot .carrot {
+    margin-left: 10rem;
+    display: flex;
+  
+}
+.carrot .imgcarrot img {
+    width: 30%;
+    
+}   
+
+/* ============================================================================================================= */
+
+
+
+
+@media screen and (max-width:1300px) {
+    .body .wrapper-introlduce .box-information{
+            display: flex;
+            flex-direction: column;
+    }
+    .wrapper-introlduce .box-information .information{
+           width: 100%;
+    }
+    .wrapper-introlduce .box-information .information .function{
+                 width: 100%;
+                 display: grid;
+                 grid-row-gap: 2rem;
+                 margin-left: 0rem;      
+            }
+            .wrapper-introlduce .introduce {            
+               margin-left: 0;
+
+            }
+            .wrapper-introlduce .introduce h1{
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+             
+                margin-left: 6rem;
+                 margin-bottom: 2rem;
+            }
+            .body .wrapper-introlduce {
+                margin-left: 0px;
+            }
+
+
+}
+

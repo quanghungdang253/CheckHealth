@@ -14,16 +14,8 @@ window.onresize = function(){  // hàm được gọi khi kích màn hình thay 
                 Nav.style.display = "block";
         }
 }
-
-
-
-
-
-
-
-
 function output(){
-      
+     
         let fullname = document.getElementById("inputName").value;    // nếu những biến này bỏ ngoài hàm thì lúc  chạy chương trình  sẽ lấy giá trị đầu tiên và không thay đổi giá trị.
           let Age = document.getElementById("inputAge").value;   
           let Sex = document.getElementById("Choose").value; 
@@ -36,9 +28,11 @@ function output(){
           let Bloodpressure1 = parseFloat(document.getElementById("Bloodpressure1").value);  // tâm thu
           let Bloodpressure2 = parseFloat(document.getElementById("Bloodpressure2").value);  //tâm trương 
           let Proximity =  parseFloat( document.getElementById("Myopiadegree").value);
+         const AudioError = new Audio("../Audio/error-8-206492.mp3");
+         const AudioResult = new Audio("../Audio/llv-132676.mp3")
+           
       
-if( 
-        
+if(     
     isNaN(Age) ||
     isNaN(Height_boy) ||
     isNaN(Weight_boy) ||
@@ -49,27 +43,41 @@ if(
     isNaN(Proximity) ||
     fullname ==="" ||
     Sex ===""
-
 ){
+              
+                Swal.fire({
+                                icon: "question",
+                                title: "Bạn Chưa Nhập Đầy Đủ Thông Tin!(you did not enter complete information !)",
+                                text:"Vui Lòng Nhập đủ thông tin để kiểm tra(Please enter complete information)",
+                              
+                                // timer: 7000,
+                                timerProgressBar: true,
+                                position:"top",
+                               customClass:{
+                                        icon: 'icon-center'
+                               }
+                                
+                })
+                AudioError.play();
    
-         alert("you did not enter complete information ! Please enter complete information");
+        //  alert("you did not enter complete information ! Please enter complete information");
         return false;  
 } 
-
-        
                 if(!Clause.checked){
                                 // alert(" Bạn chưa chon điều khoản! Vui lòng Chọn điều Khoản để tiếp tục ");
                                 Swal.fire({
-                                        title: "Bạn Chưa Chọn Điều Khoản!",
                                         icon: "question",
+                                        title: "Bạn Chưa Chọn Điều Khoản!",                                   
                                         text:" Vui lòng Chọn Điều Khoản Để Tiếp Tục",
                                         position: "top",
                                         timer: 4000,  // tự động đóng thông báo sau 4 giây
                                         timerProgressBar: true,
                                         customClass:{
-                                                timerProgressBar: "timerProgressBar"
+                                                timerProgressBar: "timerProgressBar",
+                                                  icon: 'icon-center'
                                         }
                                 })
+                                AudioError.play();
                                           return 0;
                                         }            
                              function Result(element,value){
@@ -78,6 +86,7 @@ if(
                                              element[i].innerHTML = value;
                                  }
                              }
+
                              Result(document.querySelectorAll(".fullname"),"<p> Họ và tên : "+ fullname + "</p>");
                              Result(document.querySelectorAll(".Age"), "<p> Tuổi  : "+ Age +"</p>");
                              if(Sex === "Nam"){
@@ -85,7 +94,7 @@ if(
                              }else if(Sex === "Nữ"){
                                         Result(document.querySelectorAll(".Sex"), "<p> Giới tính : "+ Sex +"</p>");
                              }
-                            
+                             AudioResult.play(); 
                              Result(document.querySelectorAll(".Height"),"<p> Chiều Cao : "+ Height_boy +" (m) </p>");
                              Result(document.querySelectorAll(".Weight"), "<p> Cân Nặng : "+ Weight_boy +" (kg) </p>");
                              Result(document.querySelectorAll(".ChestCircle"),  "<p> Vòng ngực : "+ Boy_Chest +"(cm)</p>");
@@ -188,11 +197,12 @@ if(
 
                             Myopiadegree(document.getElementsByClassName("Myopiadegree"));
 
-                            // =============================Phần hiển thị và ẩn kết quả bằng Jquery=======================================                        
+                            // =============================Phần hiển thị và ẩn kết quả bằng Jquery==============                        
                                         $(".Result").stop(true,true).show(1000);
                                         $(".Close").click(function(){
                                                         $(".Result").hide(1000);
                                         })
+                                //=====================================================================
                                       
 }
 function Reset(){
@@ -213,59 +223,39 @@ function Reset(){
 
 // phần hình ảnh quảng cáo 
 
-let Images = [
-        "Image/20221104_chi-s0-do-huyet-ap-va-nhip-tim-3.jpg",
-        "Image/nhip-tim-binh-thuong-5.jpg",
-        "Image/Chỉ-số-BMI-4+(3).png",
-        "Image/chi-so-huyet-ap-microlife-1-1024x1024.jpg"
-        ]
-               
-        
-        let index = 0;
-        
-        function Listimages(index){
-                         let Listimage = document.getElementById("list-image");
-                         Listimage.src = Images[index];
-                            
-        }
-        
-        const Left = () => {
-                        index--;
-                        if(index < 0){
-                                        index = Images.length-1
-                        }
-                        Listimages(index);
-        }
-        const Right = () =>{
-                        index++;
-                        if(index === Images.length){
-                                index = 0;
-                        }
-                        Listimages(index);
-        
-        }
-        
-        setInterval(() => {
-                        Right();
-        },5000)
-                        Listimages(index); // gọi hàm để thiết lập ảnh đầu tiên 
-        
+
         
 let Clause = document.getElementById("Choose_clause");
 Clause.addEventListener("click",function(){
-if(Clause.checked)
+if(Clause.checked === true)
 {   // Clause.checked : trả về true nếu được chọn                 [ Clause.checked]
-     let agree = confirm("Bạn đã đọc kĩ điều khoản trước khi chọn chưa"); // hàm confirm trả về true khi nhấn ok và trả về false khi nhấn cancel     
-     if(agree){    
-
-     }
-     else{   
-        Clause.checked = false;    
-     }
+        Swal.fire({
+                title: "Bạn Đã Đọc Kĩ Điều khoản Chưa!",
+                text: "Vui lòng Đọc Kĩ Điều khoản Trước Khi Xác Nhận",
+                icon: "question",
+                position: "top",
+                timer: 5000,
+                timerProgressBar: true,
+                confirmButtonText: "Xác Nhận",
+                showCancelButton: "Hủy Bỏ"
+        
+             })       
 }
 else
 {
-  let agree1 = confirm(" Bạn muốn hủy chọn Điều Khoản Đúng Không ");         // HÀM confirm : khi ta nhấn ok thì hàm sẽ trẻ về true ngược lại false 
+        Swal.fire({
+                title: "Đã hủy Chọn",
+                icon: "success",
+                position: "top",
+                timer: 3000,
+                timerProgressBar: true,
+
+
+
+        })
+
+  console.log(agree1);
+              // HÀM confirm : khi ta nhấn ok thì hàm sẽ trẻ về true ngược lại false 
      if(agree1){
            Clause.checked = false;
            alert(" Đã hủy chọn ");
@@ -291,7 +281,6 @@ form_input.addEventListener("input",function(){
         }      
         
 }) 
-
                    Button_Cancel.style.display =  "none";
                    Button_Comment.style.display = "none";
 Button_Cancel.onclick = function(){            

@@ -1,0 +1,66 @@
+
+.Body img{
+ 
+    border-radius: 3rem;
+    background-size: 100%;
+    width: 90%;
+    height: 60rem;
+    
+     object-fit: fill;
+
+}
+.Body .images{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+.Body .images .Left{
+   position: relative;
+   left: 4rem;
+}
+.Body .images .Right{
+  position: relative;
+  right: 4rem;
+}
+.Body .images .btn{
+    width: 3rem;
+    height: 6rem;
+    font-weight: 900;
+    border-radius: 2rem;
+    background: black;
+    color: white
+}
+.Body .images .btn:hover{
+background: rgba(8, 7, 7,0.5);
+}
+@media screen and (max-width: 1000px) {
+      
+.Body img{
+width: 70%;
+height: 45rem;
+transition: all 2s ease;
+object-fit: fill;
+
+}
+
+}
+
+@media screen and (max-width: 600px){
+.Body img{
+
+     width: 88%;
+     height: 30rem;
+     object-fit: fill;
+     transition: all 2s ease;
+}
+.Body .images .Left{
+position: relative;
+left: 3rem;
+}
+.Body .images .Right{
+position: relative;
+right: 3rem;
+}
+
+
+}
