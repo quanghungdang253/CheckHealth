@@ -28,8 +28,8 @@ function output(){
           let Bloodpressure1 = parseFloat(document.getElementById("Bloodpressure1").value);  // tâm thu
           let Bloodpressure2 = parseFloat(document.getElementById("Bloodpressure2").value);  //tâm trương 
           let Proximity =  parseFloat( document.getElementById("Myopiadegree").value);
-         const AudioError = new Audio("../Audio/error-8-206492.mp3");
-         const AudioResult = new Audio("../Audio/llv-132676.mp3")
+         const AudioError = new Audio("Audio/error-8-206492.mp3");
+         const AudioResult = new Audio("Audio/llv-132676.mp3")
            
       
 if(     
