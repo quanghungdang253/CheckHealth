@@ -1,14 +1,27 @@
 
 html {
     --font: "Matemasie", sans-serif;
+    --font1: "Edu VIC WA NT Beginner", cursive;
+    --font-size:2rem;
+    overflow-x: hidden;
 }
+
+
+/* ==================================phần chung ============================================= */
+
+
+
+
+
+
+/* =================================== phần giới thiệu thông tin ============================================================= */
  .body .wrapper-introlduce{
 
     padding: 2rem 0rem 2rem 0rem;
     background-color: black;
-    max-width: 100%;
+    max-width: 95%;
     color: white;
-    margin-left: 10rem;
+    margin-left: auto;
     margin-right: auto;
     
 
@@ -22,33 +35,40 @@ html {
     font-style: normal;
     display: flex;
   
-    gap: 10rem;
-    margin-left: 10%;
-
-
+    gap: 10%;
+    margin-left: 0%;
 }
 .box-information .image img{
     max-width: 30rem;
     border-radius: 990px;
 }
 .box-information .image {
+    position: relative;
     text-align: center;
+    margin-left: 10%;
+    margin-bottom: 2rem;
 }
-.wrapper-introlduce .box-information .information{
+
+.wrapper-introlduce .box-information .information {
+
     display: flex;
     flex-direction: column;
-    gap: 4rem;
-   max-width: 100%;
+    gap: 2rem;
+    max-width: 80%;
 }
 .wrapper-introlduce .box-information .information .function{
         width: 100%;
         display: grid;
         grid-row-gap: 2rem;
-        margin-left: 30rem;
+        margin-left: 30%;
+       
         
 }
 .wrapper-introlduce .box-information .information .function ol li{
             margin-bottom: 2rem;
+}
+.wrapper-introlduce .box-information .information .function p{
+    width: 100%;
 }
 .wrapper-introlduce .box-information .information h2{
     font-family: "Matemasie", sans-serif;
@@ -59,12 +79,25 @@ html {
     display: inline-block;
     color: red;
 }
-.wrapper-introlduce .introduce .box{
+.wrapper-introlduce .box-information .information .boxparagraper {
+                    max-width: 100%;
+                   
 
+}
+.wrapper-introlduce .introduce .box{
+   margin-top: 2rem;
     font-size: 1.7rem;
-    margin-left: 10%;
+     padding: 2rem 2rem;
+     border-radius: 3rem;
      display: flex;
-     gap: 5rem;
+     justify-content: center;
+     gap: 3rem;
+     background: rgb(42, 41, 41);
+
+}
+.wrapper-introlduce .introduce .box {
+   
+  color: aqua;
 }
 .wrapper-introlduce .introduce {
     font-family: var(--font) ;
@@ -75,57 +108,142 @@ html {
     margin-left: 25rem;
 }
 /* ======================================Danh sách hoa quả================================================= */
+/* ====================================phần chung===================================================== */
+ h3 {
+            font-size: 4rem;
+            font-family: var(--font1);
+         
+}     
+img {
+    border: 2px solid white;
+}
+/* ====================================================================================================== */
 .list-foot {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     margin-top: 10rem;
-    max-width: 100%;
+    max-width: 95%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    border-radius: 5rem;
+    border: 2px solid white;
+
+ 
   
 }
-.list-foot .carrot .text{
+
+.list-foot .foot .text{
+    margin-left: 10%;
+    font-size: var(--font-size) ;
+    color: aliceblue;
     width: 100%;
 }
-.list-foot .carrot {
-    margin-left: 10rem;
+.list-foot .foot .foot1 {
+    margin-top: 5rem;
     display: flex;
+    padding: 3rem 5rem 5rem 5rem; 
   
 }
-.carrot .imgcarrot img {
-    width: 30%;
-    
-}   
+.list-foot .foot .foot1 .text img{
+                width: 50%;
+                height: auto;
+                object-fit: cover;
+}
 
+.foot .imgcarrot img {
+   
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+    
+} 
+.list-foot .text h3 {
+    margin-bottom: 5%;
+}
+.list-foot .text ol {
+ display: grid;
+ gap: 2rem;
+    margin-left: 60%;
+}
+
+@media screen and (max-width: 1200px){
+    .list-foot .text ol {
+        margin-left: 0%;
+
+    }
+    .imgcarrot {
+        display: none;
+    }
+    .list-foot .foot .foot1 {
+        padding: 0rem 0rem 4rem 0rem;
+    }
+    .list-foot .foot .text {
+        margin-left: 5%;
+    }
+    .list-foot .foot .foot1 .text img {
+        width: 80%;
+    }
+
+}
+@media screen and (min-width: 1200px) {
+    .imgcarrot {
+        display: block;
+    }
+}
 /* ============================================================================================================= */
 
 
 
 
+
+
+
+
+
 @media screen and (max-width:1300px) {
-    .body .wrapper-introlduce .box-information{
+    .body .wrapper-introlduce .box-information {
+             
+             width: 100%;
+             height: 90rem;
             display: flex;
             flex-direction: column;
-    }
-    .wrapper-introlduce .box-information .information{
-           width: 100%;
-    }
-    .wrapper-introlduce .box-information .information .function{
-                 width: 100%;
+    }  
+    .wrapper-introlduce .box-information .information {
+        margin-top: 105;
+                margin-left: 17%;
+                width: 100%;
+        }
+    .wrapper-introlduce .box-information .information .function {
                  display: grid;
                  grid-row-gap: 2rem;
                  margin-left: 0rem;      
             }
-            .wrapper-introlduce .introduce {            
+    .wrapper-introlduce .introduce {            
                margin-left: 0;
 
             }
-            .wrapper-introlduce .introduce h1{
-                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-             
-                margin-left: 6rem;
+    .wrapper-introlduce .introduce h1{
+                 font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;           
+                 margin-left: 6rem;
                  margin-bottom: 2rem;
             }
-            .body .wrapper-introlduce {
-                margin-left: 0px;
+    .body .wrapper-introlduce {
+                margin-left: auto;
+                margin-right: auto;
             }
+
+    .box-information .image {
+               display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+
+              margin-left: auto;
+              margin-right: auto;
+
+            }
+            
 
 
 }
