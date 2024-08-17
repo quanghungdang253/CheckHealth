@@ -10,17 +10,18 @@ html {
 
 body{
      background-image: url('../Image/istockphoto-1693321583-2048x2048.jpg');
-    background-position-x: -250rem;
-        
-    
-     
+     background-position-x: -250rem;
 }
 .Wrapper {
       max-width: 1490px;
       height: 10000px;
 }
 /*======================== phần css chung=================================  */
-
+ a:hover {
+        transition: all ease 0.5s;
+       
+        
+ }
 
 /* ========================= phần tìm kiếm ========================================== */
 .Header-wrapper {
@@ -28,12 +29,15 @@ body{
 }
 .Header-wrapper .Header{
         margin-top: 3rem;
+        height: 6rem;
+      
+       
 }
 .btn-search{
          padding: 1px 1px;
          width: 6rem;
-        height: 3.5rem;
-        border-radius: 3rem;
+         height: 3.5rem;
+         border-radius: 3rem;
        
 }
 .Header-wrapper .Header .Fo-input{
@@ -51,9 +55,13 @@ body{
         color: var(--color);
         column-rule-color: var(--color);
 }
+
+/* =====================================phần icon================================ */
+
+
 /* ============================phần heading=================================== */
 .heading h1 {
-        margin-top: 1rem;
+        margin: 2rem 0rem 0rem 3rem;
         color: aliceblue;
 }
 .Header-wrapper .Header form{
@@ -81,8 +89,14 @@ body{
         font-size: 1.9rem;
         padding: 1rem 2rem 1rem 2rem;
         border-radius: 999px;
+        transition: all 0.5s ;
+      
 
      
+}
+.Header-wrapper #Fo-nav #nav-list li:hover {
+        transform: translateY(-4px);
+        /* transition: all 0.5s ; */
 }
 .Header-wrapper #Fo-nav #nav-list li a:hover{
         background-color: rgb(29, 32, 28);
@@ -174,7 +188,7 @@ body{
         font-size: 5em;
 } 
 
-/* =========================bodyHeader========================================== */
+/* =========================================BODY HEADER========================================== */
 
 .Header-wrapper .Body-header {
         display: flex;
@@ -310,7 +324,8 @@ body{
         }
         .Header-wrapper .heading {
                         text-align: center;
-        }
+        } 
+  
 }
 
 .MainTab .footer-Tab #Endofpage {
@@ -332,6 +347,7 @@ body{
         height: 90rem;
         display: flex;
         justify-content:center ;
+        margin-right: 35rem;
 }
 
 .Wrapper-Result  .Result{
@@ -383,23 +399,25 @@ body{
 .Wrapper-Result .Text p.warning{
         color: red;
 }
-
+@media screen and (max-width: 1200px){
+        .Wrapper-Result {
+                margin-right: 0rem;
+        } 
+               
+}
 @media screen and (max-width: 600px) {
         .Wrapper-Result {
                 height: 70%;
+                margin-left: 2rem;
         }
-        .Wrapper-Result  .Result{
-             
+        .Wrapper-Result  .Result{           
                 max-width: 30rem;
                 padding: 4rem 2rem 4rem 2rem;
         }  
         .Wrapper-Result .Text{
                 font-size: 1rem;
                 max-width:100% ; 
-        } 
-        .Wrapper-Result .Text {
-              
-        }
+        }       
         .Wrapper-Result .Close{
                 top: 1rem;
                 right: 2rem;
@@ -407,6 +425,7 @@ body{
         .Wrapper-Result h2{
                 font-size: 1rem;
         }
-        
+      
+       
       
 }

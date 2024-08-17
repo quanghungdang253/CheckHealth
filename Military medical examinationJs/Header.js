@@ -1,3 +1,5 @@
+
+
 let Nav = document.getElementById("nav");
 
 // Ẩn và hiện menu bằng jquery
@@ -14,6 +16,8 @@ window.onresize = function(){  // hàm được gọi khi kích màn hình thay 
                 Nav.style.display = "block";
         }
 }
+const AudioError = new Audio("Audio/error-8-206492.mp3");
+const AudioResult = new Audio("Audio/llv-132676.mp3")
 function output(){
      
         let fullname = document.getElementById("inputName").value;    // nếu những biến này bỏ ngoài hàm thì lúc  chạy chương trình  sẽ lấy giá trị đầu tiên và không thay đổi giá trị.
@@ -28,8 +32,7 @@ function output(){
           let Bloodpressure1 = parseFloat(document.getElementById("Bloodpressure1").value);  // tâm thu
           let Bloodpressure2 = parseFloat(document.getElementById("Bloodpressure2").value);  //tâm trương 
           let Proximity =  parseFloat( document.getElementById("Myopiadegree").value);
-         const AudioError = new Audio("Audio/error-8-206492.mp3");
-         const AudioResult = new Audio("Audio/llv-132676.mp3")
+      
            
       
 if(     
@@ -254,22 +257,23 @@ else
 
         })
 
-  console.log(agree1);
-              // HÀM confirm : khi ta nhấn ok thì hàm sẽ trẻ về true ngược lại false 
-     if(agree1){
-           Clause.checked = false;
-           alert(" Đã hủy chọn ");
-                }
-      else
-         {
-           Clause.checked = true;
-          }
+//   console.log(agree1);
+//               // HÀM confirm : khi ta nhấn ok thì hàm sẽ trẻ về true ngược lại false 
+//      if(agree1){
+//                         Clause.checked = false;
+//                          alert(" Đã hủy chọn ");
+//      }else {       
+//                         Clause.checked = true;  
+//         }
+      
 }
 })
+
+// ================================Phần Bình Luận=================================================================
 let form_input = document.getElementById("form-input");           // lấy thông tin từ ô input
 let Button_Comment = document.getElementById("Button_Comment");  // Nút  bình luận 
 let Button_Cancel = document.getElementById("Button_Cancel");  
-let Text_Comment = document.getElementById("Contend_Comment");
+let Contend_Comment = document.getElementById("Contend_Comment");
 form_input.addEventListener("input",function(){
         if(/[a-zA-Z]/.test(form_input.value))//    HÀM test(value)  có tác dụng làm  ô input có chữ cái thì đổi màu    (      TEST(VALUE) )
         {  
@@ -283,74 +287,93 @@ form_input.addEventListener("input",function(){
 }) 
                    Button_Cancel.style.display =  "none";
                    Button_Comment.style.display = "none";
-Button_Cancel.onclick = function(){            
-                    Button_Comment.style.display = "none";
-                    Button_Cancel.style.display = "none";
+Button_Cancel.onclick = function() {            
+                                         Button_Comment.style.display = "none";
+                                         Button_Cancel.style.display = "none";
                 } 
-   form_input.addEventListener("click",function(){
-               Button_Comment.style.display = "block";
-               Button_Cancel.style.display = "block";
+form_input.addEventListener("click",function(){
+                                         Button_Comment.style.display = "block";
+                                         Button_Cancel.style.display = "block";
    })
  function Display_comment() // hàm hiển thị 1  bình luận bao gồm text, delete, cancel 
-      {         
-     
-      
-         let wrap_the_content = document.createElement("div"); // wrap_the_content : bao bọc nội dung;
-             wrap_the_content.setAttribute("class","wrapthecontent");           
-              let value = form_input.value;
+{             
+                let wrap_the_content = document.createElement("div"); // wrap_the_content : bao bọc nội dung;
+                      wrap_the_content.setAttribute("class","wrapthecontent");           
+                let value = form_input.value;
           
-              let Fixcontent = value.replace(/\n/g,'<br>'); 
-              // làm sạch đoạn mã đầu vào trước khi sử dụng innerHTML
-         if(value.trim() ===''){
-               alert("Bạn chưa nhập thông tin vui lòng Nhập thông tin ");
+                let Fixcontent = value.replace(/\n/g,'<br>'); 
+              
+         if(value.trim() === ''){   // trim() giúp làm sạch đoạn mã đầu vào trước khi sử dụng innerHTML
+        //        alert("Bạn chưa nhập thông tin vui lòng Nhập thông tin ");
+                 AudioError.play();
+                Swal.fire({
+                             title: " Bạn Chưa nhập thông tin bình luận!",
+                             text: " Hãy nhập thông tin vào để bình luận",
+                             icon: "question",
+                             timer: 6000,
+                             timerProgressBar: true,
+
+
+                })
                return false; //sử dụng câu lệnh return để dừng chương trình 
             }
-                let span = document.createElement("span");  // thẻ chứa nội dụng bình luận. trong  quá trình chỉnh sữa khi 
+                let span = document.createElement("p");  // thẻ chứa nội dụng bình luận. trong  quá trình chỉnh sữa khi 
                                                             // khi ta nhấn xuống dòng nó sẽ tạo ra một thẻ p khác  
                 span.setAttribute("class","text");
                 span.innerHTML = Fixcontent;  // HỌC PHẦN NÀY 
                 wrap_the_content.appendChild(span); // hàm Display_comment nhận tham số là đoạn văn bản 
                    
           let Text = document.createElement("div");  // THEM PHAN TU p
-             //  Text.appendChild(span);  
+      
               Text.setAttribute("id","Text");        
-              Text_Comment.appendChild(Text); // thêm node phần tử p vào phần tử Text Comment    
-             Text.appendChild(wrap_the_content);
+              Contend_Comment.appendChild(Text); // thêm node phần tử p vào phần tử Text Comment    
+              Text.appendChild(wrap_the_content);
+
           let Edit = document.createElement("button"); // node CHỈNH SỮA bình luận 
               Edit.textContent = "Edit";
               Edit.setAttribute("id","Edit");
-              Text_Comment.appendChild(Edit);
+              Contend_Comment.appendChild(Edit);
 
+          let Delete =  document.createElement("button");  // nút xóa bình luận 
+                                Delete.textContent = "Delete";
+                                Delete.setAttribute("id","Delete");  
+                                Contend_Comment.appendChild(Delete);
 
-          let Delete =   document.createElement("button");  // nút xóa bình luận 
-                         Delete.textContent = "Delete";
-                         Delete.setAttribute("id","Delete");  
-                         Text_Comment.appendChild(Delete);
-
-             let edit_delete = document.createElement("div");  // phần bao quanh nút delete và nút xóa
+        let edit_delete = document.createElement("div");  // phần bao quanh nút delete và nút xóa
                                edit_delete.setAttribute("class","edit_delete");
                                edit_delete.appendChild(Edit);
                                edit_delete.appendChild(Delete);
-                               Text_Comment.appendChild(edit_delete);
+                               Contend_Comment.appendChild(edit_delete);
 
           let save = document.createElement("button"); // nút SAVE 
                      save.textContent = "Save";
                      save.setAttribute("id", "save");
-                     Text_Comment.appendChild(save);
+                     Contend_Comment.appendChild(save);
                      save.style.display = "none";
                                                                            
          let Cancels = document.createElement("button");   // NÚT CANCEL 
                        Cancels.textContent = "Cancel";
                        Cancels.setAttribute("id","Cancel");
-                       Text_Comment.appendChild(Cancels);   // thêm node Cancel vào khối chứa bình luận 
+                       Contend_Comment.appendChild(Cancels);   // thêm node Cancel vào khối chứa bình luận 
                        Cancels.style.display = "none";
 
-                       Edit.addEventListener("click",function(){  // Hàm chỉnh sữa 
-    wrap_the_content.setAttribute("contenteditable", true); //thêm thuộc tính content EditTable vào html bằng javascript
+Edit.addEventListener("click",function(){  // Hàm chỉnh sữa 
+        span.setAttribute("contenteditable", true); 
+                    span.addEventListener("keydown",function(event){
+                                if(event.key === "Enter"){
+                                     event.preventDefault();
+                                     const range = window.getSelection().getRangeAt(0);
+            const br = document.createElement('br');
+            range.deleteContents();
+            range.insertNode(br);
+            range.collapse(false);
+                                    
+                                }
+                    })                                                //thêm thuộc tính content EditTable vào html bằng javascript
                        save.style.display = "block";  
-                Cancels.style.display = "block";
-                Edit.style.display =   "none";
-                Delete.style.display = "none";   
+                       Cancels.style.display = "block";
+                       Edit.style.display =   "none";
+                       Delete.style.display = "none";   
            
         })
         Edit.addEventListener("click", function(){
@@ -358,15 +381,17 @@ Button_Cancel.onclick = function(){
         })
         save.addEventListener("click",function(){ // hàm save lưu lại 
            
-         wrap_the_content.contentEditable = false;  //  Text.setAttribute("contenteditable", false); // set thuộc tính thành false
+         span.contentEditable = false;  //  Text.setAttribute("contenteditable", false); // set thuộc tính thành false
                save.style.display = "none";
                Cancels.style.display = "none";
                Edit.style.display =   "block";
                Delete.style.display = "block";
+ // ================================Thêm nút hiển thị thông báo đã lưu vào thẻ============================================= 
+
         let Saved = document.createElement("span");
               Saved.textContent = "Saved(Đã lưu)";
-           Saved.setAttribute("class","Saved");
-                     // Thêm nút hiển thị đã lưu vào thẻ  
+              Saved.setAttribute("class","Saved");
+                    
              // tạo phần icon cho đã lưu hoàn thành  
              const iconsave = document.createElement("i"); // tao icon
              iconsave.classList.add("fas","fa-check","fa-sm");
@@ -379,36 +404,42 @@ Button_Cancel.onclick = function(){
            let wraper_saved =  document.createElement("div"); // tạo phần bao quanh nút hiển thị save 
            wraper_saved.setAttribute("class","wraper_saved"); 
            wraper_saved.appendChild(Saved);     // thêm nút save vào phần bao quanh 
-           Text_Comment.appendChild(wraper_saved);  // thêm phần tử save vào khung bình luân 
+           Contend_Comment.appendChild(wraper_saved);  // thêm phần tử save vào khung bình luân 
             
            setTimeout(function(){  // set thời gian sau 2 giây sẽ ẩn thông báo 
-              wraper_saved.style.display = "none";
+                        wraper_saved.style.display = "none";
          },1500)
+       })
+       Cancels.addEventListener("click",function(){   // thiết lập khi nhấn cancel người dùng không thể chỉnh sữa bình luận
+                 span.setAttribute("contenteditable", false);
        })              
        let wraper = document.createElement("div"); // phần bao quanh nút save và cacel đây là flew container 
         wraper.setAttribute("class","wrapper");
         wraper.appendChild(save);
         wraper.appendChild(Cancels);
-        Text_Comment.appendChild(wraper);
+        Contend_Comment.appendChild(wraper);
         
         Delete.onclick = function(){        // HÀM XÓA BÌNH LUẬN 
-              Text.remove();
-              Delete.remove();
-              Edit.remove();
-        }   
+                 Text.remove();
+                 Delete.remove();
+                Edit.remove();
+        } 
+
         Cancels.onclick = function(){
-         wrap_the_content.contentEditable = false;
-          Cancels.style.display = "none";
-          save.style.display = "none";
-          Edit.style.display =   "block";
-          Delete.style.display = "block";
+                 wrap_the_content.contentEditable = false;
+                 Cancels.style.display = "none";
+                 save.style.display = "none";
+                 Edit.style.display =   "block";
+                 Delete.style.display = "block";
         }
       }        
+
       form_input.addEventListener("click", function()
       { 
-          Button_Comment.style.display = "block";
-          Button_Cancel.style.display =  "block";
+                Button_Comment.style.display = "block";
+                Button_Cancel.style.display =  "block";
       })
+
   document.getElementById("form").addEventListener("submit",function(event){  // lắng nghe người dùng bấm 
        event.preventDefault();  // ngăn chặn form gửi đi 
   })  

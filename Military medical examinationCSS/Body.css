@@ -91,7 +91,7 @@ html {
      border-radius: 3rem;
      display: flex;
      justify-content: center;
-     gap: 3rem;
+     gap: 20%;
      background: rgb(42, 41, 41);
 
 }
@@ -112,12 +112,84 @@ html {
  h3 {
             font-size: 4rem;
             font-family: var(--font1);
+            color: rgb(247, 0, 0);
          
 }     
 img {
     border: 2px solid white;
 }
-/* ====================================================================================================== */
+/* ================================================= link foot < 1200px ===================================================== */
+.body .LinkFoot {
+    display: none;
+    height: 30%;
+    width: 60%;
+    position: relative;
+    top: 12%;
+    left: 10%;
+}
+.body .LinkFoot div {
+    background-color: black;
+    display: block;
+    padding: 3rem 5rem 3rem 5rem;
+    width: 20rem;
+    border-radius: 3rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+ .body .LinkFoot div h2 {
+    
+    margin-bottom: 2rem;
+    font-size: var(--font-size);
+    color: aqua;
+    font-family: var(--font1);
+}
+.body .LinkFoot div a {
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    color: rgb(108, 255, 3);
+    font-weight: var(--font1);
+}
+
+/* ========================================phần link foot > 1200px ================================================ */
+.Body-header .LinkFoot {
+    
+        
+           height: 30%;
+           
+            position: relative;
+            top: 12%;
+            left: 10%;
+}
+.Body-header  .LinkFoot div {
+                background-color: black;
+                display: block;
+                padding: 3rem 3rem 3rem 5rem;
+                width: 60%;
+                border-radius: 3rem;
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                flex-direction: column;
+   
+}
+.Body-header  .LinkFoot div h2 {  
+  
+    margin-bottom: 2rem;
+    font-size: var(--font-size);
+    color: aqua;
+    font-family: var(--font1);
+}
+.Body-header  .LinkFoot div a {
+    color: red;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: var(--font1);
+}
+
+
+
 .list-foot {
     background-color: rgb(0, 0, 0);
     margin-top: 10rem;
@@ -167,6 +239,75 @@ img {
     margin-left: 60%;
 }
 
+/*========================================== PHẦN :  bình luận =====================================================*/
+.Comment {
+      margin: 5% 0% 0% 5%;
+      width: 80%;
+      padding: 3rem 3rem;
+      border-top-left-radius: 2rem;
+      background: rgba(13, 13, 13,0.6);
+      border: 2px solid white;
+      box-shadow: 1rem 1rem 2rem white;
+      
+}
+
+.Comment .inputcomment h2 {
+    font-family: var(--font1);
+    font-size: 1.9rem;
+    color: white;
+    margin-bottom: 2rem;
+}   
+.Comment .inputcomment textarea {
+    width: 80%;
+    font-size: 1.9rem;
+    border-top-left-radius: 1rem;
+    padding: 1rem 2rem;
+ 
+    background: rgba(0, 0, 0,0.5);
+    color: white;
+    box-shadow: 1rem 1rem rem white;
+}
+.Comment .inputcomment textarea::placeholder{
+    color: rgb(253, 249, 249);
+}
+.Comment .submit_cancel {
+    display: flex;
+    gap: 2em;
+}
+.Comment .submit_cancel button {
+    width: 100px;
+    height: 40px;
+    border-radius: 3rem;
+    background: rgba(10, 240, 252, 0.9);
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+}
+/* .text {
+    overflow: auto;
+    white-space: pre-wrap;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px){
+    .body .wrapper-introlduce{
+
+        padding: 2rem 1rem 2rem 0rem;
+    }
+}
+
 @media screen and (max-width: 1200px){
     .list-foot .text ol {
         margin-left: 0%;
@@ -184,8 +325,22 @@ img {
     .list-foot .foot .foot1 .text img {
         width: 80%;
     }
+    .wrapper-introlduce .introduce .box {
+        gap: 10%;
+    }
+    .Body-header  .LinkFoot {
+        display: none;
+    }
+    .body .LinkFoot {
+        display: block;
+        /* max-width: 100%; */
+    }
+
 
 }
+
+
+
 @media screen and (min-width: 1200px) {
     .imgcarrot {
         display: block;

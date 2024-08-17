@@ -1,0 +1,165 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkFoot Example</title>
+    <style>
+        .LinkFoot {
+            width: 100%;
+            height: 20%;
+            padding: 10px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .LinkFoot div {
+            display: block;
+        }
+
+        .LinkFoot a {
+            display: block;
+            margin: 5px 0;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .LinkFoot h2 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="LinkFoot">
+    <div>
+        <h2>Các loại thực phẩm tốt sức khỏe </h2>
+        <a href="">1. Quả Cà Rốt(Carrot)</a>
+        <a href="">2. Quả Táo(Apple)</a>
+        <a href="">3. Quả Nho (Grape)</a>
+        <a href="">4. Quả đu đủ (Papaya)</a>
+        <a href="">5. Củ Gừng(Ginger)</a>
+        <a href="">6. Mật Ong (Honey)</a>
+      <a href="">ewefwefwefwefwefwefefewf   </a>
+      <a href="">ewefwefwefwefwefwefefewf   </a>
+      <a href="">ewefwefwefwefwefwefefewf   </a>
+      <a href="">ewefwefwefwefwefwefefewf   </a>
+      <a href="">ewefwefwefwefwefwefefewf   </a>
+      <a href="">ewefwefwefwefwefwefefewf   </a>
+      <a href="">ewefwefwefwefwefwefefewf   </a>
+      <a href="">ewefwefwefwefwefwefefewf   </a>
+      <a href="">ewefwefwefwefwefwefefewf   </a>
+      <a href="">ewefwefwefwefwefwefefewf   </a>
+      <a href="">ewefwefwefwefwefwefefewf   </a>
+      <a href="">ewefwefwefwefwefwefefewf   </a>
+    </div>
+</div>
+
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Editable Example</title>
+    <style>
+        #span {
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-height: 100px;
+            width: 300px;
+            overflow: auto;
+            white-space: pre-wrap; /* Giữ khoảng trắng và xuống dòng */
+        }
+    </style>
+</head>
+<body>
+
+<button id="Edit">Edit</button>
+<span id="span">Click "Edit" to start editing...</span>
+
+<script>
+    // Lấy phần tử cần chỉnh sửa và nút Edit
+    const span = document.getElementById("span");
+    const Edit = document.getElementById("Edit");
+
+    // Thêm sự kiện click vào nút Edit
+    Edit.addEventListener("click", function() {
+        // Bật chế độ chỉnh sửa cho phần tử span
+        span.setAttribute("contenteditable", true);
+
+        // Thêm sự kiện keydown vào phần tử span
+        span.addEventListener("keydown", function(event) {
+            // Kiểm tra xem phím Enter có được nhấn không
+            if (event.key === "Enter") {
+                // Ngăn chặn hành vi mặc định của phím Enter
+                event.preventDefault();
+                
+                // Chèn thẻ <br> vào vị trí của con trỏ
+                document.execCommand('insertHTML', false, '<br><br>');
+            }
+        });
+    });
+</script>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Editable Example</title>
+    <style>
+        .editable {
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-height: 100px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Content Editable Example</h2>
+
+<div id="editable1" class="editable" contenteditable="true">Edit me!</div>
+<div id="editable2" class="editable" contenteditable="false">Not editable</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.8/purify.min.js"></script>
+<script>
+    // Thiết lập chế độ chỉnh sửa cho toàn bộ tài liệu
+    // document.designMode = 'on'; // Bỏ comment để bật toàn bộ tài liệu chỉnh sửa
+
+    // Chèn HTML vào phần tử chỉnh sửa
+    document.getElementById('editable1').addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            const range = window.getSelection().getRangeAt(0);
+            const br = document.createElement('br');
+            range.deleteContents();
+            range.insertNode(br);
+            range.collapse(false);
+        }
+    });
+
+    document.getElementById('save').addEventListener('click', function() {
+        // Lấy nội dung HTML của phần tử chỉnh sửa
+        let content = editableElement.innerHTML;
+        
+        // Làm sạch nội dung để bảo vệ chống lại XSS
+        let sanitizedContent = DOMPurify.sanitize(content);
+        
+        // Cập nhật nội dung của phần tử chỉnh sửa với nội dung đã làm sạch
+        editableElement.innerHTML = sanitizedContent;
+        
+        // Hiển thị hoặc lưu trữ nội dung đã làm sạch (ví dụ, gửi dữ liệu đến máy chủ)
+        console.log('Sanitized Content:', sanitizedContent);
+    });
+</script>
+
+</body>
+</html>
+
