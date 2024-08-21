@@ -153,9 +153,7 @@ img {
 }
 
 /* ========================================phần link foot > 1200px ================================================ */
-.Body-header .LinkFoot {
-    
-        
+.Body-header .LinkFoot {     
            height: 30%;
            
             position: relative;
@@ -175,7 +173,6 @@ img {
    
 }
 .Body-header  .LinkFoot div h2 {  
-  
     margin-bottom: 2rem;
     font-size: var(--font-size);
     color: aqua;
@@ -242,9 +239,10 @@ img {
 /*========================================== PHẦN :  bình luận =====================================================*/
 .Comment {
       margin: 5% 0% 0% 5%;
-      width: 80%;
+      width: 75%;
       padding: 3rem 3rem;
       border-top-left-radius: 2rem;
+      border-top-right-radius: 2rem;
       background: rgba(13, 13, 13,0.6);
       border: 2px solid white;
       box-shadow: 1rem 1rem 2rem white;
@@ -273,30 +271,61 @@ img {
 .Comment .submit_cancel {
     display: flex;
     gap: 2em;
+    margin-top: 2rem;
 }
 .Comment .submit_cancel button {
     width: 100px;
     height: 40px;
     border-radius: 3rem;
-    background: rgba(10, 240, 252, 0.9);
+    background: rgba(243, 249, 249, 0.9);
     color: rgb(0, 0, 0);
     font-weight: 700;
+    cursor: pointer;
 }
-/* .text {
-    overflow: auto;
-    white-space: pre-wrap;
-} */
-
-
-
-
-
-
-
-
-
-
-
+.text {
+   font-size: 1.8rem;
+    color: white;
+    font-weight: 600;
+    padding: 2px 2px;
+    margin: 2rem 0rem 2rem 0rem;
+  
+  
+}
+.text:focus {
+    color: aliceblue;
+}
+.edit_delete {
+    display: flex;
+    gap: 3rem;
+}
+.btn {
+    text-align: center;
+    width: 7rem;
+    height: 4rem;
+    border-radius: 5rem;
+    padding: 1rem 1rem;
+    cursor: pointer;
+    font-family: var(--font1);
+    transition: all ease 0.5s;
+    color: rgb(254, 255, 255);
+    font-weight: 700;
+    background-color: black;
+ /* border: 1px solid white; */
+}
+.btn:hover {
+    background-color: rgb(18, 20, 20);
+}
+.save-cancel {
+    display: flex;
+    gap: 3rem;
+}
+.wraper_saved {    /* Phần thông báo hiện thị đã lưu*/
+            color: rgb(70, 244, 1);
+            margin: 1.5rem 0rem 0rem 1.5rem;
+            font-size: var(--font-size);
+            font-weight: 700;
+           
+}
 
 
 

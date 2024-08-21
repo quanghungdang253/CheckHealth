@@ -276,12 +276,11 @@ let Button_Cancel = document.getElementById("Button_Cancel");
 let Contend_Comment = document.getElementById("Contend_Comment");
 form_input.addEventListener("input",function(){
         if(/[a-zA-Z]/.test(form_input.value))//    HÀM test(value)  có tác dụng làm  ô input có chữ cái thì đổi màu    (      TEST(VALUE) )
-        {  
-          
-            Button_Comment.style.backgroundColor = "red";
+        {      
+                Button_Comment.style.backgroundColor = "red";
         }
         else{
-            Button_Comment.style.backgroundColor = "";
+                 Button_Comment.style.backgroundColor = "";
         }      
         
 }) 
@@ -306,81 +305,162 @@ form_input.addEventListener("click",function(){
          if(value.trim() === ''){   // trim() giúp làm sạch đoạn mã đầu vào trước khi sử dụng innerHTML
         //        alert("Bạn chưa nhập thông tin vui lòng Nhập thông tin ");
                  AudioError.play();
-                Swal.fire({
-                             title: " Bạn Chưa nhập thông tin bình luận!",
-                             text: " Hãy nhập thông tin vào để bình luận",
-                             icon: "question",
-                             timer: 6000,
-                             timerProgressBar: true,
+                         Swal.fire({
+                                title: " Bạn Chưa nhập thông tin bình luận!",
+                                text: " Hãy nhập thông tin vào để bình luận",
+                                icon: "question",
+                                 timer: 6000,
+                                timerProgressBar: true,
 
 
-                })
+                                })
                return false; //sử dụng câu lệnh return để dừng chương trình 
             }
                 let span = document.createElement("p");  // thẻ chứa nội dụng bình luận. trong  quá trình chỉnh sữa khi 
-                                                            // khi ta nhấn xuống dòng nó sẽ tạo ra một thẻ p khác  
+                    span.contentEditable = "false";                                        // khi ta nhấn xuống dòng nó sẽ tạo ra một thẻ p khác  
                 span.setAttribute("class","text");
                 span.innerHTML = Fixcontent;  // HỌC PHẦN NÀY 
                 wrap_the_content.appendChild(span); // hàm Display_comment nhận tham số là đoạn văn bản 
                    
-          let Text = document.createElement("div");  // THEM PHAN TU p
+                let Text = document.createElement("div");  // THEM PHAN TU p
       
-              Text.setAttribute("id","Text");        
-              Contend_Comment.appendChild(Text); // thêm node phần tử p vào phần tử Text Comment    
-              Text.appendChild(wrap_the_content);
+                         Text.setAttribute("id","Text");        
+                         Contend_Comment.appendChild(Text); // thêm node phần tử p vào phần tử Text Comment    
+                         Text.appendChild(wrap_the_content);
 
-          let Edit = document.createElement("button"); // node CHỈNH SỮA bình luận 
-              Edit.textContent = "Edit";
-              Edit.setAttribute("id","Edit");
-              Contend_Comment.appendChild(Edit);
+                 let Edit = document.createElement("button"); // node CHỈNH SỮA bình luận 
+                         Edit.textContent = "Edit";
+                         Edit.setAttribute("id","Edit");
+                         Edit.setAttribute("class","btn");
+                         Contend_Comment.appendChild(Edit);
 
-          let Delete =  document.createElement("button");  // nút xóa bình luận 
+                 let Delete =  document.createElement("button");  // nút xóa bình luận 
                                 Delete.textContent = "Delete";
                                 Delete.setAttribute("id","Delete");  
+                                Delete.setAttribute("class","btn");
                                 Contend_Comment.appendChild(Delete);
 
         let edit_delete = document.createElement("div");  // phần bao quanh nút delete và nút xóa
                                edit_delete.setAttribute("class","edit_delete");
+                        
                                edit_delete.appendChild(Edit);
                                edit_delete.appendChild(Delete);
+                          
                                Contend_Comment.appendChild(edit_delete);
 
           let save = document.createElement("button"); // nút SAVE 
-                     save.textContent = "Save";
-                     save.setAttribute("id", "save");
-                     Contend_Comment.appendChild(save);
-                     save.style.display = "none";
+                                save.textContent = "Save";
+                                save.setAttribute("id", "save");
+                                save.setAttribute("class","btn");
+                                Contend_Comment.appendChild(save);
+                                save.style.display = "none";
                                                                            
          let Cancels = document.createElement("button");   // NÚT CANCEL 
                        Cancels.textContent = "Cancel";
                        Cancels.setAttribute("id","Cancel");
+                       Cancels.setAttribute("class","btn");
                        Contend_Comment.appendChild(Cancels);   // thêm node Cancel vào khối chứa bình luận 
                        Cancels.style.display = "none";
 
+        let wraper = document.createElement("div"); // phần bao quanh nút save và cacel đây là flew container 
+                       wraper.setAttribute("class","save-cancel");
+                       wraper.appendChild(save);
+                       wraper.appendChild(Cancels);
+                       Contend_Comment.appendChild(wraper);
+                 
 Edit.addEventListener("click",function(){  // Hàm chỉnh sữa 
         span.setAttribute("contenteditable", true); 
-                    span.addEventListener("keydown",function(event){
-                                if(event.key === "Enter"){
-                                     event.preventDefault();
-                                     const range = window.getSelection().getRangeAt(0);
-            const br = document.createElement('br');
-            range.deleteContents();
-            range.insertNode(br);
-            range.collapse(false);
-                                    
-                                }
-                    })                                                //thêm thuộc tính content EditTable vào html bằng javascript
+                         span.focus();   // khi ta thiết lập contentedittable lần đầu  thì con trỏ sẽ cập nhật và di chuyển về đầu dòng
+                        let selection = window.getSelection(); // thiết lập đại diện cho vùng văn bản của bình luận mà người dùng đã chọn 
+                        let range = document.createRange(); // tạo đối tượng range từ đối selcetion để thao với phạm vi văn bản 
+                        range.selectNodeContents(span);
+                        range.collapse(false);  // di chuyển con trỏ chuột về cuối range
+                        selection.removeAllRanges();
+                        selection.addRange(range);
                        save.style.display = "block";  
                        Cancels.style.display = "block";
                        Edit.style.display =   "none";
                        Delete.style.display = "none";   
-           
+       
         })
-        Edit.addEventListener("click", function(){
-                    wrap_the_content.focus(); // đặt con trỏ chuột vào ô bình luận khi nhấn chỉnh sữa 
-        })
+
+span.addEventListener("keydown", function(event){
+        //cách 1
+                // if(event.key === 'Enter' && event.target.isContentEditable){
+                //         event.preventDefault();
+                //         let selection = window.getSelection(); // lấy vị trí con trỏ hiện tại 
+                //         let range = selection.getRangeAt(0);
+
+                //         let br = document.createElement("br");
+                //         range.insertNode(br); // chèn thẻ <br> vào ngay vị trí con trỏ soạn thảo 
+                //         let newbr = document.createElement("br");
+                //         range.insertNode(newbr);
+                //         range.setStartAfter(newbr);
+                  
+// cách 2
+if(event.key === 'Enter' && event.target.isContentEditable){
+                event.preventDefault();
+                        let range = window.getSelection().getRangeAt(0);
+                        let br = document.createElement("br");   
+                       
+                        range.deleteContents();      // Xóa nội dung hiện tại trong phạm vi
+                
+                        // Chèn thẻ <br> vào vị trí con trỏ
+                        range.insertNode(br);  // chèn thẻ <br> thứ 1 để xuống dòng
+                
+                        // Tạo một đoạn văn mới để đặt con trỏ xuống dòng
+                        let newLine = document.createElement("br"); 
+                        range.insertNode(newLine);   // chèn thẻ <br> thứ 2 
+                
+                        // Đặt con trỏ vào vị trí sau thẻ <div>
+                        //  range.collapse(false);
+                        range.setStartAfter(newLine);  // đặt điểm bắt đầu vào sau thẻ br 
+                        // range.setEndAfter(newLine);
+                
+                        // Xóa tất cả các vùng chọn và thêm lại vùng chọn mới
+                        window.getSelection().removeAllRanges();
+                        window.getSelection().addRange(range);
+                
+                        // Di chuyển con trỏ vào phần tử mới
+                        newLine.focus();
+}
+})
+                        
+// cách 2
+
+        //                 let selection = window.getSelection();
+        // let range = selection.getRangeAt(0);
+        // let br = document.createElement("br");
+
+        // // Xóa nội dung hiện tại trong phạm vi
+        // range.deleteContents();
+
+        // // Thêm thẻ <br> vào vị trí con trỏ
+        // range.insertNode(br);
+
+        // // Di chuyển con trỏ xuống dòng mới
+        // let newRange = document.createRange();
+        // newRange.setStartAfter(br);
+        // newRange.setEndAfter(br);
+        // selection.removeAllRanges();
+        // selection.addRange(newRange);
+
+        // // Đặt con trỏ vào vị trí sau thẻ <br>
+        // let br2 = document.createElement("br");
+        // range.insertNode(br2);
+        // newRange.setStartAfter(br2);
+        // newRange.setEndAfter(br2);
+        // selection.removeAllRanges();
+        // selection.addRange(newRange);
+                        // document.execCommand('insertHTML', false, '<br><br>');
+                        // // Đặt con trỏ vào vị trí sau thẻ <br>
+                        // let range = window.getSelection().getRangeAt(0);
+                        // range.collapse(false);
+                        // window.getSelection().removeAllRanges();
+                        // window.getSelection().addRange(range);
+
         save.addEventListener("click",function(){ // hàm save lưu lại 
-           
+             
          span.contentEditable = false;  //  Text.setAttribute("contenteditable", false); // set thuộc tính thành false
                save.style.display = "none";
                Cancels.style.display = "none";
@@ -413,11 +493,7 @@ Edit.addEventListener("click",function(){  // Hàm chỉnh sữa
        Cancels.addEventListener("click",function(){   // thiết lập khi nhấn cancel người dùng không thể chỉnh sữa bình luận
                  span.setAttribute("contenteditable", false);
        })              
-       let wraper = document.createElement("div"); // phần bao quanh nút save và cacel đây là flew container 
-        wraper.setAttribute("class","wrapper");
-        wraper.appendChild(save);
-        wraper.appendChild(Cancels);
-        Contend_Comment.appendChild(wraper);
+   
         
         Delete.onclick = function(){        // HÀM XÓA BÌNH LUẬN 
                  Text.remove();

@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "sweetalert2": "^11.12.4"
+    "sweetalert2": "^11.12.4",
+    "tinymce": "^7.3.0"
   }
 }

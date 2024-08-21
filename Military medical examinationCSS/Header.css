@@ -14,13 +14,12 @@ body{
 }
 .Wrapper {
       max-width: 1490px;
-      height: 10000px;
+      margin: auto;
 }
 /*======================== phần css chung=================================  */
  a:hover {
         transition: all ease 0.5s;
-       
-        
+           
  }
 
 /* ========================= phần tìm kiếm ========================================== */
