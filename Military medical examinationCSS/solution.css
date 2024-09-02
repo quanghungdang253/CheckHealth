@@ -1,0 +1,215 @@
+html {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 62.5%;
+    /* overflow-x: hidden;
+    overflow-y: auto; */
+}
+
+/* ============== css Common part======================= */
+
+h1 {
+    font-size: 2.3rem;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+b {
+    color: red;
+    font-weight: 700;
+}
+.main-content {
+          margin-left: 5%;
+
+}
+img {
+    width: 100%;
+}
+/*=========================================================*/
+/* ===========================thanh tiến trình Nprogress=======================*/
+#nprogress .bar{
+    background:rgba(53, 246, 0, 0.647);
+}
+/*==============================================================================*/
+.Wrapper {
+        max-width: 1900px;
+        height: 10000px;
+        margin:0 auto;
+    
+}
+header {
+    width: 100%;
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+    
+}
+
+header .card__header .card__header--title h1{
+    animation: move 6s infinite;  /* infinite: vô hạn */
+     font-weight: 700;                   
+    font-size: 3.5rem;  
+                                 
+}
+header .card__header .card__header--title {
+    width: 80%;
+    font-size: 4rem;
+    margin-bottom: 4rem;
+
+    background-color: white;
+     display: inline-block;    
+ }
+ header .card__header .card__header--text {
+            max-width: 100%;
+       
+            font-size: 2.5rem;
+        
+ }
+ header .card__header .card__header--card1 {
+            width: 100%;
+ }
+
+
+header .card__header--card1 {
+    text-align: center; 
+}
+header .card__header--card2 {
+    margin-top: 4rem;
+    font-size: 2rem;
+}
+header .card__header--card2 ol {
+        margin-top: 2rem;
+        display: grid;
+        gap: 2rem;
+}
+@keyframes move {
+    0% {
+        transform: translateX(-100px);
+    }
+    25% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(-100px);
+    }
+    
+   
+}
+
+    
+
+
+
+
+
+
+/*=============================phần body======================================== */
+
+body #card__body {
+  
+    font-size: 1.9rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.card__body--list {
+       margin:6rem auto;
+     
+      
+}
+.card__body .card__body--image{
+    text-align: center;
+    
+}
+.card__body .card__body--image h1{
+    margin-bottom: 2rem;
+}
+body .card__body--list img {
+    cursor: pointer;
+    object-fit: contain;
+    max-width: 70%;
+    height: auto;
+    transition: ease 0.4s;
+   
+}
+body .card__body--list img:hover {
+              transform: translateY(-10px);
+       
+}
+.card__body--list .method {
+        width: 90%;
+}
+.card__body--list .method li {
+    margin-bottom: 2rem;
+}
+
+
+
+#AddElement {
+    font-size: 1.9rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#Add {
+    margin-left: 40%;
+    width: 13rem;
+    cursor: pointer;
+    background: rgba(29, 26, 26,0.9);
+    color: white;
+    font-weight: 700;
+    border-radius: 3rem;
+    padding: 1rem 1rem ;
+
+}
+
+@media screen and (max-width: 1100px){
+ 
+    body #card__body {
+        display: grid;
+        grid-template-columns: 100%;
+    } 
+    #AddElement {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    header .card__header .card__header--text {
+            width: 100%;
+          
+    }
+}
+@media screen and (max-width: 768px){
+    html {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 62.5%;
+       
+    }
+    body .card__body--list img {
+        max-width: 100%;
+    }
+    #Add {
+        margin-left: 30%;
+    }
+    @keyframes move {
+        0% {
+            transform: translateX(-50px);
+        }
+        25% {
+            transform: translateX(0);
+        }
+        75% {
+            transform: translateX(35px);
+        }
+        100% {
+            transform: translateX(-50px);
+        }
+        
+       
+    }
+   
+  
+       
+}
