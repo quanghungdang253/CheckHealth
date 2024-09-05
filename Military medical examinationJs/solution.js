@@ -18,8 +18,7 @@ fetch(datajson)   // fetch là một đối tượng
                     Output += 
                     `
                                  <li> ${response.Push_ups[i]} </li>
-                    `
-                   
+                    `                  
             }
             document.getElementById("method--push_up").innerHTML = Output;
                     return response;  
@@ -63,10 +62,10 @@ fetch(datajson)   // fetch là một đối tượng
         })
 
 document.getElementById("Add").addEventListener("click", Addmethod);
-let addmethod = "../fileJson/method2.json"
-let Add  = "";
-let index = 0;
-let increase = 0; // increase : tăng
+        let addmethod = "../fileJson/method2.json"
+        let Add  = "";
+        let index = 0;
+        let increase = 0; // increase : tăng
 
 function Addmethod(){
  
@@ -110,10 +109,10 @@ function Addmethod(){
                 index = increase;
              
              document.getElementById("AddElement").innerHTML = Add ;
-              
+            
               })
               .catch(() => {
-                        alert("Lỗi kết nối");
+                    document.getElementById("Add").style.display = "none";
               })
 }
 

@@ -1,14 +1,18 @@
 
 /* =======================================phần chung================================== */
 b {
-  font-style: italic;
+  /* font-style: italic; */
   font-weight: 700;
-  color: black;
+  color: rgb(246, 5, 5);
+  
 }
 h1 {
+  font-family: "Kanit", sans-serif;
+  font-weight: 100;
+  font-style: normal;
   color: black;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem;  
 }
 .body .Wrappercontent .content .text div {
     width: 100%;
@@ -24,12 +28,18 @@ img {
   width: 100%;
   height: auto;
 }
+li {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1.8rem;
+}
 /* ========================================================================================= */
 
 .Wrapper {
   max-width: 1600px;
   margin: 0 auto;
-
+  
   position: relative;
 }
 
@@ -51,16 +61,24 @@ img {
  
     border-radius: 3rem;
     background-size: 100%;
-      width: 90%;
-    height: 60rem;
+    width: 90%;
+    height: 60%;
     
      object-fit: fill;
 
 }
-.Body .images{
+.Body .header-images{
     display: flex;
     align-items: center;
      justify-content: center;  
+}
+.Body .header-images button {
+  width: 3rem;
+  height: 6rem;
+  font-weight: 900;
+  border-radius: 2rem;
+  background: black;
+  color: white
 }
 .Body .images .Left{
    position: relative;
@@ -70,14 +88,7 @@ img {
   position: relative;
   right: 4rem;
 }
-.Body .images .btn{
-    width: 3rem;
-    height: 6rem;
-    font-weight: 900;
-    border-radius: 2rem;
-    background: black;
-    color: white
-}
+
 .Body .images .btn:hover{
         background: rgba(8, 7, 7,0.5);
 }
@@ -114,28 +125,30 @@ img {
       display: grid;
       grid-row-gap: 3rem;
 }
-.body .Wrappercontent .content .image {
-  display: grid;
-  grid-row-gap: 3rem;
+
+.body .Wrappercontent .content .image  {
+      display: grid;
+      gap: 10%;
+      width: 50%;
 }
-/* .body .Wrappercontent .content .image img {
-        width: 90%;
-} */
-.body .Wrappercontent .content .image .img2 {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
+
 @media screen and (max-width: 1300px) {
   .body .Wrappercontent .content {
     display: flex;
     flex-direction: column;
   }
-  h1 {
-    font-size: 1.4rem;
-  }
+  .body .Wrappercontent .content .image  {
+    display: grid;
+    gap: 10%;
+    width: 100%;
+}
+.body .Wrappercontent .content .image {
+  display: grid;
+  grid-row-gap: 2rem;
+}
+  
   .body .Wrappercontent .content .text div .label {
-    font-size: 2rem;
+      font-size: 2rem;
 }
   .body {
     font-size: 1rem;
@@ -144,48 +157,21 @@ img {
   .body .Wrappercontent .content .text {
             width: 100%;
   }
-  .Body img {
-        height: 20rem;
-        max-width: 90%;
-  }
-  .body .Wrappercontent .content .image {
-      display: grid;
-      grid-row-gap: 2rem;
-  }
   .Wrapper .nav {
     position: absolute;
     left: 2px;
       text-decoration: none;
      
-     font-size: 1.5rem;
+     font-size: 2rem;
       background-color: rgb(0, 0, 0);
       object-fit: cover;
       border-radius: 999px;
       color: aliceblue;
    }
-  
+   h1 {
+    font-size: 1.4rem;
+}
 }
 
-/* @media screen and (max-width: 600px){
-.Body img{
-     width: 100%;
-     height: 15rem;
-     object-fit: fill;
-     transition: all 3s ease;
-}
-.Body .images .Left{
-        position: relative;
-          left: 3rem;
-}
-
-.Body .images .Right{
-        position: relative;
-        right: 3rem;
-}
-.Body .images .btn {
-    width: 2rem;
-    height: 4rem;
-    opacity: 1;
-} */
 
 
