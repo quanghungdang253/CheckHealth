@@ -1,7 +1,7 @@
 
     [
          {
-             "title": "Nhảy Dây(rope skipping) ",
+             "title": "<p id=index3> Nhảy Dây(rope skipping) </p>",
              "img" : "../Imagesolution/nhayday.jpg",
               "text": [
                " <b> 1. Cải thiện sức khỏe tim mạch :</b> Nhảy dây là một bài tập cardio giúp tăng cường sức khỏe tim mạch, tăng cường khả năng tuần hoàn máu và giảm nguy cơ mắc các bệnh tim mạch. ",
@@ -17,7 +17,7 @@
               
          },
          {
-          "title": "Chạy bước nhỏ",
+          "title": "<p id=index3> Chạy bước nhỏ </p>",
           "img" : "../Imagesolution/jogging-8971335_640.jpg",
            "text": [
                " <b> 1. Cải thiện sức khỏe tim mạch:  </b> Chạy bước nhỏ tại chỗ là một dạng bài tập cardio, giúp tăng cường sức khỏe tim mạch, cải thiện tuần hoàn máu, và tăng cường khả năng hô hấp.",
@@ -39,7 +39,7 @@
            
          },
          {
-            "title": "Squat bật nhảy",
+            "title": " <p id=index4> Squat bật nhảy </p>",
             "img" : "../Imagesolution/Squat.jpg",
              "text": [
                "Tập Squat là một bài tập thể lực cơ bản và rất hiệu quả cho toàn bộ cơ thể. Dưới đây là một số lợi ích chính của việc tập Squat:",
@@ -57,7 +57,7 @@
              
            },
            {
-            "title": "Chạy Bộ",
+            "title": "<p id=index4> Chạy Bộ </p>",
             "img" : "../Imagesolution/Run.jpg",
              "text": [
                "Chạy bộ là một hình thức tập thể dục rất phổ biến và mang lại nhiều lợi ích cho sức khỏe. Dưới đây là những lợi ích chính của việc chạy bộ:",

@@ -40,8 +40,10 @@ html {
     margin-left: 0%;
 }
 .box-information .image img{
+    object-fit: cover;
     max-width: 30rem;
     border-radius: 990px;
+    height: 7em;
 }
 .box-information .image {
     position: relative;

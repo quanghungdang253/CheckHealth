@@ -1,6 +1,6 @@
 {
     
-   "Push_ups" : [ "<p> <b> 1. Tăng cường cơ bắp: </b> Hít đất giúp phát triển và tăng cường cơ bắp ở vùng ngực, vai, tay, và cơ bụng. Đây là bài tập lý tưởng để xây dựng sức mạnh và cơ bắp cho phần trên cơ thể. </p> ",
+   "Push_ups" : [" <p> <b> 1. Tăng cường cơ bắp: </b> Hít đất giúp phát triển và tăng cường cơ bắp ở vùng ngực, vai, tay, và cơ bụng. Đây là bài tập lý tưởng để xây dựng sức mạnh và cơ bắp cho phần trên cơ thể. </p> ",
 
     "<p> <b> 2. Cải thiện sức bền: </b> Thực hiện hít đất đều đặn có thể giúp cải thiện sức bền và khả năng chịu đựng của cơ bắp.</p>",
 
@@ -14,18 +14,18 @@
 
     "<p> <b>7. Đốt cháy calo: </b> Mặc dù không phải là bài tập cardio mạnh mẽ, hít đất vẫn giúp đốt cháy calo và hỗ trợ quá trình giảm cân khi kết hợp với chế độ ăn uống hợp lý và các bài tập khác. </p>",
 
-   "<p> <b>8. Cải thiện sự phối hợp và cân bằng: </b> Hít đất yêu cầu sự phối hợp giữa nhiều nhóm cơ khác nhau, giúp cải thiện khả năng phối hợp và cân bằng cơ thể. </p>"
-],
+   "<p> <b>8. Cải thiện sự phối hợp và cân bằng: </b> Hít đất yêu cầu sự phối hợp giữa nhiều nhóm cơ khác nhau, giúp cải thiện khả năng phối hợp và cân bằng cơ thể. </p>   "
+     ],
 
-"Pull_ups": [
-      "<p> <b> 1. Phát triển cơ bắp: </b> Hít xà đơn tập trung vào các nhóm cơ chính như cơ lưng xô (latissimus dorsi), cơ bắp tay (biceps), cơ vai (deltoids), và cơ ngực. Đây là bài tập lý tưởng để phát triển sức mạnh và kích thước của những nhóm cơ này. </p>",
+"Pull_ups": [ 
+      " <p> <b> 1. Phát triển cơ bắp: </b> Hít xà đơn tập trung vào các nhóm cơ chính như cơ lưng xô (latissimus dorsi), cơ bắp tay (biceps), cơ vai (deltoids), và cơ ngực. Đây là bài tập lý tưởng để phát triển sức mạnh và kích thước của những nhóm cơ này. </p>",
       "<p> <b> 2. Tăng cường sức mạnh cơ thể trên: </b> Bài tập này giúp cải thiện sức mạnh tổng thể của phần trên cơ thể, bao gồm cả vai, cánh tay, và lưng, giúp bạn thực hiện tốt hơn các bài tập khác và nâng cao khả năng vận động hàng ngày. </p>",
        "<p> <b> 3. Cải thiện sự ổn định và cân bằng: </b>  Hít xà đơn yêu cầu sự phối hợp và ổn định từ nhiều nhóm cơ, đặc biệt là các cơ cốt lõi, giúp cải thiện sự cân bằng và ổn định của cơ thể. </p>",
       "<p> <b> 4. Tăng cường sức mạnh cốt lõi (core strength): </b> Khi thực hiện hít xà đơn, cơ bụng và cơ lưng dưới cũng phải làm việc để giữ cơ thể ổn định, từ đó tăng cường sức mạnh cốt lõi. </p>",
       "<p> <b> 5. Tăng cường sức bền: </b> Thực hiện hít xà đơn thường xuyên có thể giúp cải thiện sức bền của các nhóm cơ ở phần trên cơ thể, giúp bạn duy trì hiệu suất cao hơn trong các hoạt động thể chất khác. </p>",
       "<p> <b> 6. Cải thiện khả năng linh hoạt và phạm vi chuyển động: </b> Hít xà đơn giúp mở rộng và kéo dài các cơ ở vai và lưng, giúp cải thiện sự linh hoạt và phạm vi chuyển động của cơ thể. </p>",
       "<p> <b> 7. Đốt cháy calo: </b> Mặc dù hít xà đơn là một bài tập sức mạnh, nó vẫn có thể giúp đốt cháy calo, hỗ trợ quá trình giảm cân khi được kết hợp với một chế độ ăn uống và chương trình tập luyện hợp lý. </p>",
-      "<p> <b> 8. Tăng cường sự tự tin và động lực: </b> Hít xà đơn là một bài tập khó, và việc thực hiện thành công số lần lặp mong muốn có thể mang lại cảm giác thành tựu, tăng cường sự tự tin và động lực tập luyện. </p>"
+      "<p> <b> 8. Tăng cường sự tự tin và động lực: </b> Hít xà đơn là một bài tập khó, và việc thực hiện thành công số lần lặp mong muốn có thể mang lại cảm giác thành tựu, tăng cường sự tự tin và động lực tập luyện. </p> "
     ],
 
 "Plank":[

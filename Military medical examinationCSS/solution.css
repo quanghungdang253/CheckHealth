@@ -23,7 +23,27 @@ b {
 }
 img {
     width: 100%;
+    height: 10rem;
 }
+#link {
+    height: 4rem; 
+    background-color: black;
+    padding: 1rem 1rem;
+    cursor: pointer;
+
+}
+a {
+    text-decoration: none;
+    color: rgb(255, 252, 252);
+    font-weight: 600;
+}
+big {
+    font-size: 3em;
+  display: block;
+  margin-top: 2rem;
+}
+
+
 /*=========================================================*/
 /* ===========================thanh tiến trình Nprogress=======================*/
 #nprogress .bar{
@@ -54,7 +74,7 @@ header .card__header .card__header--title {
     width: 80%;
     font-size: 4rem;
     margin-bottom: 4rem;
-
+ 
     background-color: white;
      display: inline-block;    
  }
@@ -72,16 +92,84 @@ header .card__header .card__header--title {
 header .card__header--card1 {
     text-align: center; 
 }
+header .card__header--card2-list-of-exercises {
+   
+         transition: all 1s ease;       /* transition không áp dụng với display: block */
+         position: absolute;
+            bottom: 3em;
+         margin-left: 19.5em;
+        max-width: 40%;
+        padding: 2rem 2rem;
+        display: none;
+
+}
+
+header #Card__Header-Nav-mobie {
+    position: absolute;
+       transition: all 0.6s ease;
+       text-decoration: none;
+       color: rgb(255, 252, 252);
+       font-weight: 600;
+       background-color: black;
+       width: 16em;
+       cursor: pointer;
+       display: none;
+   }
+
+header #Card__Header-Nav-mobie li {
+
+   width: 15em;
+}
+
+
+header .card__header--card2-list-of-exercises li{
+      
+       transition: all 0.6s ease;
+        text-decoration: none;
+        color: rgb(255, 249, 249);
+        font-weight: 600;
+        background-color: black;
+        width: 30em;
+        cursor: pointer;
+}
+header .card__header--card2-list-of-exercises li:hover {
+    background-color:rgb(36, 37, 37) ;
+}
+.card__header--card2 li:hover #Card__Header-Nav-computer {
+    display: block;
+} 
+
 header .card__header--card2 {
     margin-top: 4rem;
     font-size: 2rem;
 }
+header .card__header--card2 ol #link {
+       
+             padding: 2rem 2rem;
+}
 header .card__header--card2 ol {
+    
         margin-top: 3%;
-   margin-left: 2%;
+        margin-left: 2%;
         display: grid;
         gap: 2rem;
 }
+header .card__header--card2 ol li{
+    max-width: 20em;
+}
+header .card__header--card2 ol li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1rem;
+  
+}
+.card__header--card2 #link::after{
+        content: '👉🏻';
+        font-size: 4rem;
+        margin-left: 3%;
+}
+
 @keyframes move {
     0% {
         transform: translateX(-100px);
@@ -98,13 +186,114 @@ header .card__header--card2 ol {
     
    
 }
+/*======================= thiết kế hiển thị trên nhiều thiết bị Responsive ========================   */
 
+
+@media screen and (min-width: 768px) and (max-width:1024px) {
+    header #Card__Header-Nav-mobie {
+        position: absolute;
+           transition: all 0.6s ease;
+           text-decoration: none;
+           color: rgb(255, 252, 252);
+           font-weight: 600;
+           background-color: black;
+           width: 19em;
+           text-align: center;
+           cursor: pointer;
+           display: none;
+       }
+       header #Card__Header-Nav-mobie li {
+
+        width: 19em;
+     }
+}
+
+
+@media screen and (max-width: 1100px){
+  
+    header .card__header--card2-list-of-exercises {
+        display: none;
+    }
+    header #Card__Header-Nav-mobie li:hover {
+        background-color: rgb(44, 40, 40);
+    }
+    .card__header--card2 li:hover #Card__Header-Nav-mobie {
+        display: block;
+    }
     
 
+    .card__header--card2 #link::after{
+        content: '🔽';
+        font-size: 4rem;
+        margin-left: 3%;
+}
 
 
 
 
+    header .card__header--card2 {
+        position: relative;
+        font-size: 2rem;
+        max-width: 40%;
+    }
+
+
+
+    header .card__header--card2-list-of-exercises {
+        transition: all 0.4s ease;  /* transition không áp dụng với display: block */                                    
+         position: absolute;
+         top: 15rem;
+         left: 0%;
+         bottom: 0%;
+        
+       opacity: 0;
+    }
+ 
+
+
+}
+header .card__header--card2-list-of-exercises li{
+        max-width: 15em;
+        padding: 1em 1em;
+        
+}
+@media screen and (max-width: 768px){
+
+
+
+    header .card__header--card2 {
+        position: relative;
+        max-width: 40%;
+    }
+
+
+    header .card__header--card2 ol #link {
+        width: 18em;
+        font-size: 1.5rem;
+    }
+    header .card__header--card2-list-of-exercises {
+        transition: all 1s ease;  /* transition không áp dụng với display: block */                                    
+         position: absolute;
+         top: 7rem;
+         left: 0%;
+         bottom: 0%;
+         margin-left: 0em;
+      
+       
+       opacity: 0;
+    }
+    header .card__header--card2-list-of-exercises li{
+        max-width: 15em;
+        padding: 2px 2px;
+        
+}
+/* .card__header--card2 li:hover .card__header--card2-list-of-exercises {
+    opacity: 1;
+     
+} */
+ 
+
+}
 
 /*=============================phần body======================================== */
 
@@ -115,8 +304,10 @@ body #card__body {
     display: grid;
     grid-template-columns: 50% 50%;
 }
+
 .card__body--list {
        margin:6rem auto;
+    
      
       
 }
@@ -141,6 +332,9 @@ body .card__body--list img:hover {
 }
 .card__body--list .method {
         width: 90%;
+        font-weight: 900;
+        margin-top: 5%;
+        
 }
 .card__body--list .method li {
     margin-bottom: 2rem;
@@ -153,10 +347,15 @@ body .card__body--list img:hover {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 50% 50%;
+    grid-auto-flow: dense;
+  
+  
 }
+#AddElement.hidden {
+    display: contents; /* Phần tử không được hiển thị nhưng các phần tử con vẫn được hiển thị */
+}
+.btn {
 
-#Add {
-    margin-left: 40%;
     width: 13rem;
     cursor: pointer;
     background: rgba(29, 26, 26,0.9);
@@ -166,6 +365,15 @@ body .card__body--list img:hover {
     padding: 1rem 1rem ;
 
 }
+ .card__body-Add{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+
+
 
 @media screen and (max-width: 1100px){
  
@@ -175,13 +383,26 @@ body .card__body--list img:hover {
     } 
     #AddElement {
         display: grid;
+     
         grid-template-columns: 100%;
     }
     header .card__header .card__header--text {
             width: 100%;
           
     }
+    .card__body-Add{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 25%;
+    
+    }
 }
+
+
+
+
+
 @media screen and (max-width: 768px){
     html {
         font-family: 'Times New Roman', Times, serif;
