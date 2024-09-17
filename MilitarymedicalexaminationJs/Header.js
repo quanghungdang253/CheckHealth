@@ -15,6 +15,8 @@ window.onresize = function(){  // hàm được gọi khi kích màn hình thay 
         if(window.innerWidth > 1200){
                 Nav.style.display = "block";
         }
+             
+        
 }
 const AudioError = new Audio("Audio/error-8-206492.mp3");
 const AudioResult = new Audio("Audio/llv-132676.mp3")
