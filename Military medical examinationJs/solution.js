@@ -75,6 +75,7 @@ fetch(datajson)   // fetch là một đối tượng
         let index = 0;
         let increase = 0; // increase : tăng
         let error = "Lỗi 404";
+
 function HandleAddmethod(){
               NProgress.start();
               NProgress.inc(10);
@@ -114,7 +115,7 @@ function HandleAddmethod(){
                         `                    
                 }
                 index = increase;           
-                          AddElement.innerHTML = Add ;           
+                          AddElement.innerHTML = Add;           
               })
               .catch((error) => {
                 alert(error);
@@ -125,8 +126,7 @@ function HandleAddmethod(){
               })
             
 }
-
-                                                   // gọi lại hàm Thêm danh sách
+                                                // gọi lại hàm Thêm danh sách
 function Hidden(){   // Hidden : ẩn 
       BoxElement.style.display = "none";      // increase: tăng 
       AddInfor.style.display = "none";  
@@ -143,8 +143,57 @@ function Show(){
 }
 
 function Showmethod(){
- 
          HandleAddmethod();
 }
+
+let Box_habit = "";      
+let Outputhabit = document.getElementById("cardbody2--box");      // khung chứa thông tin 
+const data = "../fileJson/habit.json"
+function Render(value){
+        fetch(data)
+                    .then((response) => {
+                            return response.json();
+                    })
+                    .then(value);    // gọi hàm ẩn danh và truyền vào giá trị là json
+                    
+}
+ let body = document.getElementById("body");
+
+
+Render(function(value){
+            for(let i = 0;i<value.length;i++){
+                        Box_habit += `
+                            <div class="cardbody2--information"> 
+                                    <h1>  ${value[i].title} </h1>
+                                <div class="cardbody2--box-table"> 
+                                        <img src=${value[i].image}>                              
+                                        <table>                                           
+                                                 ${value[i].rows.join('')}   
+                                        </table>
+                                </div> 
+
+                           </div>
+                        
+                        `
+                       
+            }
+            Outputhabit.innerHTML += Box_habit;
+            
+
+})
+
+
+function Datahabit(){
+        
+}
+
+let Habit = () => {
+
+}
+
+let HandleAddhabit = () => {
+
+}
+
 
         

@@ -1,0 +1,77 @@
+[
+     {
+        "title": "Thức khuya hoặc Ngủ không đủ giấc",
+        "image": "../ImagesHabit/pexels-kampus-7414100.jpg",
+      
+        "rows": [
+            "<tr>\n  <th> Tác hại </th> \n <th> Biện pháp </th>\n</tr>",
+            "<tr>\n  <td> 1. Suy giảm hệ miễn dịch: </td> \n <td> 1. Tạo thói quen ngủ đều đặn </td>   \n  </tr>",
+            "<tr>\n  <td> 2. Rối loạn giấc ngủ:     </td>  \n <td> 2. Tránh sử dụng điện thoại, máy tính hoặc xem TV trước giờ đi ngủ ít nhất 1 giờ </td> \n </tr>",
+            "<tr>\n  <td> 3. Giảm khả năng tập trung và trí nhớ: </td> \n <td> 3. tạo thói quen ngủ đủ giấc </td> \n </tr> ",
+            "<tr>\n  <td> 4.Nguy cơ mắc các bệnh mãn tính như: Tiểu đường, tim mạch  </td> \n <td> 4.Tập thể dục đều đặn: </td> \n </tr>",
+            "<tr>\n <td> 5. Rối loạn nội tiết: </td> \n <td> 5.Điều chỉnh chế độ ăn uống: ránh ăn các bữa ăn lớn ngay trước khi đi ngủ. </td> \n </tr> ",
+            "<tr>\n <td> 6. Tổn hại da và nhan sắc: </td> \n <td> 6. Giấc ngủ trưa hợp lý:Ngủ trưa khoảng 15-30 phút có thể giúp bạn tỉnh táo hơn vào buổi chiều </td> \n </tr> ",
+            "<tr>\n <td> 7. Mệt mỏi và suy giảm năng lượng: </td> \n <td>7.tạo thói quen ngủ đủ giấc Xây dựng môi trường ngủ thoải mái: </td> \n </tr> "
+        ]
+    
+    },
+    {
+    "title": "ngồi lâu và thiếu vận động",
+        "image": "../ImagesHabit/luoi-van-dong-1024x577.jpg",
+      
+        "rows": [
+            "<tr>\n  <th> Tác hại </th> \n <th> Biện pháp </th>\n</tr>",
+            "<tr>\n  <td> 1. Các vấn đề về xương khớp và cơ bắp: </td> \n <td> 1. Vận động nhẹ nhàng và thường xuyên: Thực hiện các bài tập giãn cơ nhẹ nhàng trong khi làm việc như đứng dậy, vươn vai, xoay cổ, hoặc bước đi vài phút mỗi giờ.</td>   \n  </tr>",
+            "<tr>\n  <td> 2. Rối loạn tuần hoàn máu:    </td>  \n <td> 2. Thay đổi tư thế ngồi:Sử dụng ghế có tư thế ngồi thoải mái, hỗ trợ lưng và cột sống, đồng thời chú ý ngồi thẳng lưng. </td> \n </tr>",
+            "<tr>\n  <td> 3. Tăng nguy cơ bệnh tim mạch và tiểu đường: </td> \n <td> 3.Thực hiện các bài tập thể dục đều đặn: Dành ít nhất 30 phút mỗi ngày để tập thể dục </td> \n </tr> ",
+            "<tr>\n  <td> 4. Căng thẳng mắt và đau đầu: </td> \n <td> 4.Sử dụng bàn làm việc đứng (standing desk) </td> \n </tr>",
+            "<tr>\n <td>  5. Ảnh hưởng đến tâm lý: </td> \n <td> 5. Điều chỉnh môi trường làm việc:Đặt màn hình máy tính ở mức mắt để tránh cúi hoặc ngẩng đầu quá nhiều.  </td> \n </tr> ",
+            "<tr>\n <td> 6. Giảm năng suất làm việc và khả năng tập trung: </td> \n <td> 6.Uống nhiều nước:Uống đủ nước giúp duy trì cơ thể tỉnh táo, đồng thời tạo điều kiện để bạn phải đứng dậy đi lại thường xuyên. </td> \n </tr> "
+            
+        ]
+    },
+    {
+        "title": "Ăn uống không điều độ và thiếu dinh dưỡng",
+            "image": "../ImagesHabit/đinhuong.jpg",
+          
+            "rows": [
+                "<tr>\n  <th> Tác hại </th> \n <th> Biện pháp </th>\n</tr>",
+                "<tr>\n  <td> 1. Suy dinh dưỡng và thiếu năng lượng </td> \n <td> 1 Ăn đủ bữa và đúng giờ:</td>   \n  </tr>",
+                "<tr>\n  <td> 2. Rối loạn tiêu hóa:  như đau dạ dày, viêm loét dạ dày, và táo bón.  </td>  \n <td> 2. Cân đối dinh dưỡng trong bữa ăn:</td> \n </tr>",
+                "<tr>\n  <td> 3.  Tăng nguy cơ béo phì và bệnh mãn tính: </td> \n <td> 3.Hạn chế đồ ăn nhanh và thực phẩm chế biến sẵn: </td> \n </tr> ",
+                "<tr>\n  <td> 4.Thiếu hụt vitamin và khoáng chất: </td> \n <td> 4. Bổ sung rau xanh và trái cây </td> \n </tr>",
+                "<tr>\n <td>  Suy giảm chức năng não và tâm lý:</td> \n <td> 5. Uống đủ nước mỗi ngày,Tạo thói quen ăn uống lành mạnh,Thực hiện chế độ ăn đa dạng:  </td> \n </tr> "
+            ]
+        },
+        {
+            "title": "Uống quá nhiều nước ngọt ",
+                "image": "../ImagesHabit/softdrink.jpg",
+              
+                "rows": [
+                    "<tr>\n  <th> Tác hại </th> \n <th> Biện pháp </th>\n</tr>",
+                    "<tr>\n  <td> 1.Tăng nguy cơ béo phì: </td> \n <td> 1 Thay thế bằng nước lọc hoặc nước ép trái cây tự nhiên:</td>   \n  </tr>",
+                    "<tr>\n  <td> 2. Tăng nguy cơ mắc bệnh tiểu đường loại 2:  </td>  \n <td> 2. Uống nước có hương vị tự nhiên:</td> \n </tr>",
+                    "<tr>\n  <td> 3.  Gây sâu răng </td> \n <td>  3. Hạn chế uống nước ngọt có ga: \n </tr> ",
+                    "<tr>\n  <td> 4. Làm tăng nguy cơ bệnh tim mạch: </td> \n <td> 4.Đọc nhãn thực phẩm:Kiểm tra hàm lượng đường và caffeine trên nhãn sản phẩm trước khi mua </td> \n </tr>",
+
+                    "<tr>\n <td> 5. Gây mất cân bằng dinh dưỡng:</td> \n <td> 5.Giảm tiêu thụ từ từ:Nếu bạn uống nhiều nước ngọt hoặc cà phê mỗi ngày, hãy giảm dần lượng tiêu thụ để tránh gặp các triệu chứng do cai nghiện caffeine hoặc đường. </td> \n </tr> "
+
+                    
+                ]
+            }
+
+    
+                  
+                       
+                       
+                 
+                    
+
+               
+    
+    
+    
+    
+    
+
+]
