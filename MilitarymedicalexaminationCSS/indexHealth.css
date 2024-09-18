@@ -56,8 +56,8 @@ p {
  
     border-radius: 3rem;
     background-size: 100%;
-    width: 20rem;
-    height: 10rem;
+    width: 80rem;
+    height: 40rem;
     
      object-fit: fill;
 
@@ -163,6 +163,16 @@ p {
       border-radius: 999px;
       color: aliceblue;
    }
+   .Body img{
+ 
+    border-radius: 3rem;
+    background-size: 100%;
+    width: 20rem;
+    height: 15rem;
+    
+     object-fit: fill;
+
+}
    h1 {
     font-size: 1.4rem;
 }
