@@ -33,13 +33,30 @@ a {
     text-decoration: none;
     color: rgb(255, 252, 252);
     font-weight: 600;
+    text-align: center;
+    
 }
 big {
     font-size: 3em;
   display: block;
   margin-top: 2rem;
 }
-
+.card__header--btn {
+    border: 2px solid red;
+}
+.card__header--btn li {
+        list-style-type: decimal;
+        color: white;
+}
+.card__header--btn li:hover {
+        background-color: rgb(30, 26, 26);
+        color: white;
+        transition: all 0.6s ease;
+     text-decoration: none;
+     color: rgb(255, 249, 249);
+     font-weight: 600;
+     cursor: pointer;
+}
   
 
 
@@ -87,67 +104,38 @@ header .card__header .card__header--title {
 header .card__header--card1 {
     text-align: center; 
 }
-header .card__header--card2-list-of-exercises {
-   
+header .card__header--card2-list {
+         
          transition: all 1s ease;       /* transition không áp dụng với display: block */
          position: absolute;
-            bottom: 3em;
-         margin-left: 19.5em;
+         bottom: 2.5em;
+         margin-left: 20em;
         max-width: 40%;
         padding: 2rem 2rem;
         display: none;
 
 }
-
-header #Card__Header-Nav-mobie {
-    position: absolute;
-       transition: all 0.6s ease;
-       text-decoration: none;
-       color: rgb(255, 252, 252);
-       font-weight: 600;
-       background-color: black;
-       width: 16em;
-       cursor: pointer;
-       display: none;
-   }
-
-header #Card__Header-Nav-mobie li {
-
-   width: 15em;
+#Card__Header-Nav-computer {
+    background-color: black;
+    width: 30rem;
 }
 
-
-header .card__header--card2-list-of-exercises li{
-      
-       transition: all 0.6s ease;
-        text-decoration: none;
-        color: rgb(255, 249, 249);
-        font-weight: 600;
-        background-color: black;
-        width: 30em;
-        cursor: pointer;
-}
-header .card__header--card2-list-of-exercises li:hover {
-    background-color:rgb(36, 37, 37) ;
-}
 .card__header--card2 li:hover #Card__Header-Nav-computer {
     display: block;
 } 
+
 
 header .card__header--card2 {
     margin-top: 4rem;
     font-size: 2rem;
 }
-header .card__header--card2 ol #link {
-       
-             padding: 2rem 2rem;
-}
+
 header .card__header--card2 ol {
-    
         margin-top: 3%;
         margin-left: 2%;
         display: grid;
         gap: 2rem;
+       
 }
 header .card__header--card2 ol li{
     max-width: 20em;
@@ -163,6 +151,42 @@ header .card__header--card2 ol li a{
         content: '👉🏻';
         font-size: 4rem;
         margin-left: 3%;
+}
+
+header #Card__Header-Nav-mobie {
+       position: absolute;
+       transition: all 0.6s ease;
+       text-decoration: none;
+       color: rgb(255, 252, 252);
+       font-weight: 600;
+       background-color: black;
+       width: 15em;
+       cursor: pointer;
+       display: none;
+       
+   }
+
+.card__header--card2 #Habit {
+    transition: all 1s ease;         /* transition không áp dụng với display: block */
+    position: absolute;
+    bottom: 2em;
+    margin-left: 20em;
+    display: none;
+}
+
+
+.card__header--card2 li:hover #Habit {
+        display: block;
+}
+.Habit li {
+    transition: all 0.6s ease;
+     text-decoration: none;
+     color: rgb(255, 249, 249);
+     font-weight: 600;
+     background-color: black;
+     width: 30em;
+     padding: 2rem 2rem;
+     cursor: pointer;
 }
 
 @keyframes move {
@@ -192,7 +216,7 @@ header .card__header--card2 ol li a{
            color: rgb(255, 252, 252);
            font-weight: 600;
            background-color: black;
-           width: 19em;
+         
            text-align: center;
            cursor: pointer;
            display: none;
@@ -201,14 +225,18 @@ header .card__header--card2 ol li a{
 
         width: 19em;
      }
+     .card__header--card2 li:hover #Card__Header-Nav-computer {
+        display: none;
+     }
+
 }
 
 
 @media screen and (max-width: 1100px){
   
-    header .card__header--card2-list-of-exercises {
+    /* header .card__header--card2-list {
         display: none;
-    }
+    } */
     header #Card__Header-Nav-mobie li:hover {
         background-color: rgb(44, 40, 40);
     }
@@ -234,7 +262,7 @@ header .card__header--card2 ol li a{
 
 
 
-    header .card__header--card2-list-of-exercises {
+    header .card__header--card2-list {
         transition: all 0.4s ease;  /* transition không áp dụng với display: block */                                    
          position: absolute;
          top: 15rem;
@@ -247,45 +275,44 @@ header .card__header--card2 ol li a{
 
 
 }
-header .card__header--card2-list-of-exercises li{
-        max-width: 15em;
-        padding: 1em 1em;
-        
-}
-@media screen and (max-width: 768px){
 
-
-
+@media screen and (max-width: 768px) {
     header .card__header--card2 {
         position: relative;
-        max-width: 40%;
+      
     }
-
 
     header .card__header--card2 ol #link {
-        width: 18em;
+        width: 20em;
         font-size: 1.5rem;
     }
-    header .card__header--card2-list-of-exercises {
+    header .card__header--card2-list {
         transition: all 1s ease;  /* transition không áp dụng với display: block */                                    
          position: absolute;
          top: 7rem;
          left: 0%;
          bottom: 0%;
          margin-left: 0em;
-      
+       
        
        opacity: 0;
     }
-    header .card__header--card2-list-of-exercises li{
-        max-width: 15em;
-        padding: 2px 2px;
-        
+
+.card__header--card2 #Habit {
+    margin-left: 0em;
+    padding: 0em;
+    width: 5em;
+    position: absolute;
+    top: 65%;
 }
-/* .card__header--card2 li:hover .card__header--card2-list-of-exercises {
-    opacity: 1;
-     
-} */
+.card__header--card2 #Habit li:hover {
+    display: block;
+}
+.card__header--card2 #Habit li {
+
+    width: 15em;
+    box-shadow: 10px 2px rgb(243, 4, 4);
+}
  
 
 }

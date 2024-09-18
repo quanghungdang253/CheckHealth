@@ -163,7 +163,7 @@ function Render(value){
 Render(function(value){
             for(let i = 0;i<value.length;i++){
                         Box_habit += `
-                            <div class="cardbody2--information"> 
+                            <div class="cardbody2--information" id=${i}> 
                                     <h1>  ${value[i].title} </h1>
                                 <div class="cardbody2--box-table"> 
                                         <img src=${value[i].image}>                              
