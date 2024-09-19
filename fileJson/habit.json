@@ -58,7 +58,75 @@
 
                     
                 ]
-            }
+            },
+            {
+                "title": "Uống quá nhiều nước ngọt ",
+                    "image": "../ImagesHabit/softdrink.jpg",
+                  
+                    "rows": [
+                        "<tr>\n  <th> Tác hại </th> \n <th> Biện pháp </th>\n</tr>",
+                        "<tr>\n  <td> 1.Tăng nguy cơ béo phì: </td> \n <td> 1 Thay thế bằng nước lọc hoặc nước ép trái cây tự nhiên:</td>   \n  </tr>",
+                        "<tr>\n  <td> 2. Tăng nguy cơ mắc bệnh tiểu đường loại 2:  </td>  \n <td> 2. Uống nước có hương vị tự nhiên:</td> \n </tr>",
+                        "<tr>\n  <td> 3.  Gây sâu răng </td> \n <td>  3. Hạn chế uống nước ngọt có ga: \n </tr> ",
+                        "<tr>\n  <td> 4. Làm tăng nguy cơ bệnh tim mạch: </td> \n <td> 4.Đọc nhãn thực phẩm:Kiểm tra hàm lượng đường và caffeine trên nhãn sản phẩm trước khi mua </td> \n </tr>",
+    
+                        "<tr>\n <td> 5. Gây mất cân bằng dinh dưỡng:</td> \n <td> 5.Giảm tiêu thụ từ từ:Nếu bạn uống nhiều nước ngọt hoặc cà phê mỗi ngày, hãy giảm dần lượng tiêu thụ để tránh gặp các triệu chứng do cai nghiện caffeine hoặc đường. </td> \n </tr> "
+    
+                        
+                    ]
+                },
+                {
+                    "title": "Uống quá nhiều nước ngọt ",
+                        "image": "../ImagesHabit/softdrink.jpg",
+                      
+                        "rows": [
+                            "<tr>\n  <th> Tác hại </th> \n <th> Biện pháp </th>\n</tr>",
+                            "<tr>\n  <td> 1.Tăng nguy cơ béo phì: </td> \n <td> 1 Thay thế bằng nước lọc hoặc nước ép trái cây tự nhiên:</td>   \n  </tr>",
+                            "<tr>\n  <td> 2. Tăng nguy cơ mắc bệnh tiểu đường loại 2:  </td>  \n <td> 2. Uống nước có hương vị tự nhiên:</td> \n </tr>",
+                            "<tr>\n  <td> 3.  Gây sâu răng </td> \n <td>  3. Hạn chế uống nước ngọt có ga: \n </tr> ",
+                            "<tr>\n  <td> 4. Làm tăng nguy cơ bệnh tim mạch: </td> \n <td> 4.Đọc nhãn thực phẩm:Kiểm tra hàm lượng đường và caffeine trên nhãn sản phẩm trước khi mua </td> \n </tr>",
+        
+                            "<tr>\n <td> 5. Gây mất cân bằng dinh dưỡng:</td> \n <td> 5.Giảm tiêu thụ từ từ:Nếu bạn uống nhiều nước ngọt hoặc cà phê mỗi ngày, hãy giảm dần lượng tiêu thụ để tránh gặp các triệu chứng do cai nghiện caffeine hoặc đường. </td> \n </tr> "
+        
+                            
+                        ]
+                    },
+                    {
+                        "title": "Uống quá nhiều nước ngọt ",
+                            "image": "../ImagesHabit/softdrink.jpg",
+                          
+                            "rows": [
+                                "<tr>\n  <th> Tác hại </th> \n <th> Biện pháp </th>\n</tr>",
+                                "<tr>\n  <td> 1.Tăng nguy cơ béo phì: </td> \n <td> 1 Thay thế bằng nước lọc hoặc nước ép trái cây tự nhiên:</td>   \n  </tr>",
+                                "<tr>\n  <td> 2. Tăng nguy cơ mắc bệnh tiểu đường loại 2:  </td>  \n <td> 2. Uống nước có hương vị tự nhiên:</td> \n </tr>",
+                                "<tr>\n  <td> 3.  Gây sâu răng </td> \n <td>  3. Hạn chế uống nước ngọt có ga: \n </tr> ",
+                                "<tr>\n  <td> 4. Làm tăng nguy cơ bệnh tim mạch: </td> \n <td> 4.Đọc nhãn thực phẩm:Kiểm tra hàm lượng đường và caffeine trên nhãn sản phẩm trước khi mua </td> \n </tr>",
+            
+                                "<tr>\n <td> 5. Gây mất cân bằng dinh dưỡng:</td> \n <td> 5.Giảm tiêu thụ từ từ:Nếu bạn uống nhiều nước ngọt hoặc cà phê mỗi ngày, hãy giảm dần lượng tiêu thụ để tránh gặp các triệu chứng do cai nghiện caffeine hoặc đường. </td> \n </tr> "
+            
+                                
+                            ]
+                        },
+                        {
+                            "title": "Uống quá nhiều nước ngọt ",
+                                "image": "../ImagesHabit/softdrink.jpg",
+                              
+                                "rows": [
+                                    "<tr>\n  <th> Tác hại </th> \n <th> Biện pháp </th>\n</tr>",
+                                    "<tr>\n  <td> 1.Tăng nguy cơ béo phì: </td> \n <td> 1 Thay thế bằng nước lọc hoặc nước ép trái cây tự nhiên:</td>   \n  </tr>",
+                                    "<tr>\n  <td> 2. Tăng nguy cơ mắc bệnh tiểu đường loại 2:  </td>  \n <td> 2. Uống nước có hương vị tự nhiên:</td> \n </tr>",
+                                    "<tr>\n  <td> 3.  Gây sâu răng </td> \n <td>  3. Hạn chế uống nước ngọt có ga: \n </tr> ",
+                                    "<tr>\n  <td> 4. Làm tăng nguy cơ bệnh tim mạch: </td> \n <td> 4.Đọc nhãn thực phẩm:Kiểm tra hàm lượng đường và caffeine trên nhãn sản phẩm trước khi mua </td> \n </tr>",
+                
+                                    "<tr>\n <td> 5. Gây mất cân bằng dinh dưỡng:</td> \n <td> 5.Giảm tiêu thụ từ từ:Nếu bạn uống nhiều nước ngọt hoặc cà phê mỗi ngày, hãy giảm dần lượng tiêu thụ để tránh gặp các triệu chứng do cai nghiện caffeine hoặc đường. </td> \n </tr> "
+                
+                                    
+                                ]
+                            }
+                
+            
+        
+    
 
     
                   

@@ -146,7 +146,8 @@ function Showmethod(){
          HandleAddmethod();
 }
 
-let Box_habit = "";      
+let Box_habit = "";  
+ 
 let Outputhabit = document.getElementById("cardbody2--box");      // khung chứa thông tin 
 const data = "../fileJson/habit.json"
 function Render(value){
@@ -161,7 +162,7 @@ function Render(value){
 
 
 Render(function(value){
-            for(let i = 0;i<value.length;i++){
+            for(let i = 0;i<4;i++){
                         Box_habit += `
                             <div class="cardbody2--information" id=${i}> 
                                     <h1>  ${value[i].title} </h1>
@@ -182,18 +183,57 @@ Render(function(value){
 
 })
 
-
-function Datahabit(){
-        
+function Renderhabit(value){
+    fetch(data)
+                .then((response) => {
+                        return response.json();
+                })
+           
+                .then(value)   // gọi hàm ẩn danh và truyền vào giá trị là json
+                .catch(() =>{
+                        alert("Hết");
+                })
+                
+}
+let indexs = 4;
+let btnDown = document.getElementById("btnDown");
+let btnUp = document.getElementById("btnUp");
+btnDown.style.display = "none";
+function Data_habit(){
+    let Box_habit1 = "";
+    let setindex = indexs + 2;
+  
+   
+            Renderhabit(function(value){
+                if(indexs === value.length){
+                         btnDown.style.display = "block"; 
+                         btnUp.style.display = "none";
+                 }
+                        for(let i = indexs;i < setindex;i++){                
+                            Box_habit1 += `
+                            <div class="cardbody2--information" id=${i}> 
+                                    <h1>  ${value[i].title} </h1>
+                                <div class="cardbody2--box-table"> 
+                                        <img src=${value[i].image}>                              
+                                        <table>                                           
+                                                 ${value[i].rows.join('')}   
+                                        </table>
+                                </div> 
+                           </div>
+                       
+                        `
+                        }
+                                    indexs = setindex;
+                              
+                                    Outputhabit.innerHTML += Box_habit1; 
+                                     
+                    
+                  
+            });
+           
 }
 
-let Habit = () => {
 
-}
-
-let HandleAddhabit = () => {
-
-}
 
 
         
