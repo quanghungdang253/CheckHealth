@@ -60,7 +60,17 @@ big {
          cursor: pointer;
 }
   
+.btn {
 
+    width: 20rem;
+    cursor: pointer;
+    background: rgba(29, 26, 26,0.9);
+    color: white;
+    font-weight: 700;
+    border-radius: 3rem;
+    padding: 1rem 1rem ;
+
+}
 
 
 /*=========================================================*/
@@ -376,17 +386,7 @@ body .card__body--list img:hover {
 #AddElement.hidden {
     display: contents; /* Phần tử không được hiển thị nhưng các phần tử con vẫn được hiển thị */
 }
-.btn {
 
-    width: 13rem;
-    cursor: pointer;
-    background: rgba(29, 26, 26,0.9);
-    color: white;
-    font-weight: 700;
-    border-radius: 3rem;
-    padding: 1rem 1rem ;
-
-}
  .card__body-Add{
     display: flex;
     flex-direction: column;
@@ -428,7 +428,7 @@ th {
 }
 
 #cardbody2--box:hover >:not(:hover) {
-    filter: blur(8px);
+    filter: blur(1px);
 
 }
 .cardbody2--information {

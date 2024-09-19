@@ -148,7 +148,8 @@ function Showmethod(){
 
 let Box_habit = "";  
  
-let Outputhabit = document.getElementById("cardbody2--box");      // khung chứa thông tin 
+let Box_Info = document.getElementById("cardbody2--box");      // khung chứa thông tin 
+let Box_Info1 =  document.getElementById("cardbody2--box-add");
 const data = "../fileJson/habit.json"
 function Render(value){
         fetch(data)
@@ -168,7 +169,7 @@ Render(function(value){
                                     <h1>  ${value[i].title} </h1>
                                 <div class="cardbody2--box-table"> 
                                         <img src=${value[i].image}>                              
-                                        <table>                                           
+                                        <table>                                         
                                                  ${value[i].rows.join('')}   
                                         </table>
                                 </div> 
@@ -178,7 +179,7 @@ Render(function(value){
                         `
                        
             }
-            Outputhabit.innerHTML += Box_habit;
+            Box_Info.innerHTML += Box_habit;
             
 
 })
@@ -196,20 +197,21 @@ function Renderhabit(value){
                 
 }
 let indexs = 4;
-let btnDown = document.getElementById("btnDown");
 let btnUp = document.getElementById("btnUp");
+let btnDown = document.getElementById("btnDown");
 btnDown.style.display = "none";
+let btnShow = document.getElementById("btnShow");
+btnShow.style.display = "none";
+
 function Data_habit(){
     let Box_habit1 = "";
     let setindex = indexs + 2;
-  
-   
             Renderhabit(function(value){
                 if(indexs === value.length){
                          btnDown.style.display = "block"; 
                          btnUp.style.display = "none";
                  }
-                        for(let i = indexs;i < setindex;i++){                
+                        for(let i = indexs; i < setindex; i++){                
                             Box_habit1 += `
                             <div class="cardbody2--information" id=${i}> 
                                     <h1>  ${value[i].title} </h1>
@@ -223,14 +225,23 @@ function Data_habit(){
                        
                         `
                         }
-                                    indexs = setindex;
-                              
-                                    Outputhabit.innerHTML += Box_habit1; 
+                                    indexs = setindex;                            
+                                    Box_Info1.innerHTML += Box_habit1; 
                                      
                     
                   
             });
            
+}
+let HandleDown = () => {
+            btnShow.style.display = "block";
+            btnDown.style.display = "none";
+            Box_Info1.style.display = "none";
+}
+let HandleShow = () => {
+     Box_Info1.style.display = "block";
+     btnShow.style.display = "none";
+     btnDown.style.display = "block";
 }
 
 

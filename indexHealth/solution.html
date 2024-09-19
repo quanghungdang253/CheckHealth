@@ -155,7 +155,7 @@
                                         <div class="card__body-Add"> 
                                                    <button onclick="Show()" id="Show" class="btn"> Hiển thị ⏬ </button>
                                                     <button id="Add" class="Up btn" >  
-                                                            <p> Xem thêm ⏬ </p>
+                                                            <p> Xem thêm các bài tập ⏬ </p>
                                                    </button>
                                                     <button id="Add"  class="Down btn" onclick=" Hidden()">  
                                                             <p> Ẩn bớt 🔼</p>
@@ -166,9 +166,8 @@
                             <div class="main-content main-content-2">
                                 <div class="cardbody2">  <!-- block -->
                                         <div class="cardbody2__ElementHabit">                                              
-                                                <div  id="cardbody2--box"> </div>
-                                              
-                                               
+                                                <div  id="cardbody2--box">  </div> 
+                                                <div  id="cardbody2--box-add">  </div>
                                         </div>
                                        
 
@@ -176,11 +175,12 @@
                                 </div>     
                                 <div class="card__body2-btn">
                                     <button  class="Up btn" onclick="Data_habit()" id="btnUp">  
-                                        <p> Xem thêm ⏬ </p>
+                                            <p> Xem thêm ⏬ </p>
                                     </button>
                                     <button   class="Down btn" onclick="HandleDown()" id="btnDown">  
-                                        <p> Ẩn bớt 🔼</p>
+                                            <p> Ẩn bớt 🔼</p>
                                     </button>
+                                    <button  id="btnShow" class="Show btn" onclick="HandleShow()"> Hiển thị ⏬ </button>
                                 </div>                     
                             </div>
 
