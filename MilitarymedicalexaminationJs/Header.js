@@ -1,11 +1,11 @@
 
 
-let Nav = document.getElementById("nav");
+let Nav = document.getElementById("Header__nav");
 
 // Ẩn và hiện menu bằng jquery
 $(document).ready(function () {
         $('#menu').click(function(){
-                $('nav').stop(true,true).slideToggle();
+                $('#Header__nav').stop(true,true).slideToggle();
         })
 });
 

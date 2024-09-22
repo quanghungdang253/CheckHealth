@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="MilitarymedicalexaminationCSS/main.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+                <!-- link favicon -->
+                <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+                <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+                <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+                <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+                <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+                <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+                <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+                <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+                <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+                <link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
+                <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+                <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+                <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+                <link rel="manifest" href="./favicon/manifest.json">
+                <meta name="msapplication-TileColor" content="#ffffff">
+                <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
+                <meta name="theme-color" content="#ffffff">
+
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -15,41 +35,47 @@
             <div id="menu">
                          <i class="fa-solid fa-bars"></i>   
              </div>
+             
             <div class="main-content main-content-1"> 
                 <div class="Header-wrapper">
-                    <div class="Header"> 
-                            <form action="https://www.google.com/search">
-                                <input type="text" name="q" id="youtube" class=" btn Fo-input Fo-search" placeholder="Tìm hiểu thêm thông tin tại đây ">
-                                 <button class="btn btn-search"> Search </button>
+                    <header class="Header">
+                        <div class="Header__search">
+                            <img src="./favicon/favicon.ico" alt="" class="Header__search--image" >
+                            <form action="https://www.google.com/search" class="Header__Form">
+                                <input type="text" name="q" id="youtube" class="Header__input" placeholder="Tìm hiểu thêm thông tin tại đây ">
+                                <button class="Header__button  Header__button--btn"> Search </button>  <!--btn btn-search -->
                             </form>
-                        <div id="Fo-nav">  
-                            <nav id="nav">
+                        </div> 
+
+                        <!-- Fo-nav -->
+                            <nav id="Header__nav">              <!-- nav -->
                             <!-- <button id="close"> ❎ </button> -->
-                                <ul id="nav-list">
-                                     <li>                                    
-                                            <a href=""> <i class="fa-solid fa-house fa-shake"></i>  Home </a>
+                                <ul id="Header__list">  <!-- nav-list -->
+                                     <li class="Header__item">                                    
+                                            <a href="" class="Header__item--btn" > <i class="fa-solid fa-house fa-shake"></i>  Home </a>
                                     </li>
-                                    <li>
-                                        <a href="indexHealth/indexHealth.html"><i class="fa-solid fa-notes-medical"></i>   Health index </a>
+                                    <li class="Header__item">       
+                                        <a href="indexHealth/indexHealth.html" class="Header__item--btn"><i class="fa-solid fa-notes-medical"></i>   Health index </a>
                                     </li>
-                                    <li>
-                                            <a href="indexHealth/solution.html"><i class="fa-solid fa-blog"></i>  Solution </a>
+                                    <li class="Header__item">
+                                            <a href="indexHealth/solution.html" class="Header__item--btn" ><i class="fa-solid fa-blog"></i>  Solution </a>
                                     </li>
-                                     <li>
-                                            <a href="">   <i class="fa-solid fa-phone fa-bounce"></i> Call </a>
+                                     <li class="Header__item">
+                                            <a href="" class="Header__item--btn">   <i class="fa-solid fa-phone fa-bounce"></i> Call </a>
                                     </li>
-                                    <li>
-                                            <a href="">  <i class="fa-solid fa-bookmark"></i>  Introlduce </a>
+                                    <li class="Header__item">
+                                            <a href=""class="Header__item--btn" >  <i class="fa-solid fa-bookmark"></i>  Introlduce </a>
                                     </li>
                                 </ul>
                             </nav>
-                        </div> 
-                        
-                    </div>
+                                             
+                    </header>
+
                     <div class="heading">
                         <h1> Kiểm tra sức khỏe</h1>
                     </div>
-                    <div class="Body-header">                      
+
+                    <main class="Body-header">                      
                         <div id="Form-input"> 
                                 <div class="label">
                                         <h2>  Nhập thông tin để kiểm tra </h2>
@@ -177,7 +203,8 @@
                                         <a href="#honey">6. Mật Ong (honey)</a>                                   
                                 </div>
                         </div>                                         
-                    </div>
+                    </main>
+
                     <div class="Wrapper-Result">          <!-- Result : kết quả -->                               
                         <div class="Result">
                           <div class="Close">
