@@ -17,11 +17,9 @@ body{
       margin: auto;
 }
 /*======================== phần css chung=================================  */
- a:hover {
-        transition: all ease 0.5s;
-           
- }
- .Header__item--btn {
+
+
+.Header__item--btn {
         text-decoration: none;
         background: rgb(25, 24, 24,0.5);
         color: white;
@@ -31,8 +29,13 @@ body{
         border-radius: 999px;
       
 }
+/*===============================================================================*/
+ a:hover {
+        transition: all ease 0.5s;
+           
+ }
 
-/* ========================= phần tìm kiếm ========================================== */
+
 .Header-wrapper {
         height: 1000px;
 }
