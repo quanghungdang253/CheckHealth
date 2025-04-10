@@ -75,6 +75,7 @@ body{
         font-size: medium;
         height: 20px;
         padding: 10px 10px;
+        max-width: 100px
 }
 .Header__button--btn {
         background:transparent;
@@ -325,7 +326,7 @@ body{
         }    
         .Body-header .label h2{
                 font-size: 2rem;
-        }
+        }       
         .Body-header #Form-input .Fo-input{
                 gap:0rem;
         }
