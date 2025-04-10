@@ -43,8 +43,9 @@ body{
        
         margin: 3rem 0rem 0rem 4rem;
         height: 6rem;
-        display: grid;
-        grid-template-columns: 40% 60%
+       display: flex;
+       align-items: center;
+       justify-content: space-around;
         
        
 }
@@ -56,25 +57,31 @@ body{
       
 }
 .Header__search--image {
-        font-size: 50px;
+       
         border-radius: 50%;
+        object-fit: contain;
+        width: 50px;
+
         
 }
 .Header__Form {
         display: flex;
 }
 .Header__input {
+        border-radius: 20px;
         background: transparent;
         color: white;
         font-weight: var(--font-weight);
         font-size: medium;
+        height: 25px;
+        padding: 10px 10px;
 }
 .Header__button--btn {
         background:transparent;
         color: white;
         font-weight: var(--font-weight);
         border: 2px solid;
-        border-radius: 10px;
+        border-radius: 20px;
         cursor: pointer;
 }
 .Header__button--btn:hover{
@@ -100,7 +107,8 @@ body{
         color: aliceblue;
 }
 .Header-wrapper .Header form{
-        
+                 display: flex;
+                 grid-column-gap: 2rem;
                 margin-left: 1rem;
 }
 /* ===============================================cssThông báo================================================= */
@@ -188,7 +196,8 @@ body{
 }
 .Header-wrapper .heading h1{
         font-weight: var(--font-weight);
-        font-size: 5em;
+        font-size: 3em;
+        margin-left: 15rem;
 } 
 
 /* =========================================BODY HEADER========================================== */

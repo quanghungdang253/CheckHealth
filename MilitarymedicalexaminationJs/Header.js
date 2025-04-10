@@ -82,16 +82,14 @@ if(
                                                   icon: 'icon-center'
                                         }
                                 })
-                                AudioError.play();
+                                AudioError.play();      // thư viện Audio 
                                           return 0;
                                         }            
-                             function Result(element,value){
-                                     console.log(element.length);
-                                 for(let i = 0;i < element.length;i++){
-                                             element[i].innerHTML = value;
-                                 }
+                             function Result(element,value){    
+                                                 for(let i = 0;i < element.length;i++){
+                                                         element[i].innerHTML = value;
+                                                         }
                              }
-
                              Result(document.querySelectorAll(".fullname"),"<p> Họ và tên : "+ fullname + "</p>");
                              Result(document.querySelectorAll(".Age"), "<p> Tuổi  : "+ Age +"</p>");
                              if(Sex === "Nam"){
@@ -140,7 +138,7 @@ if(
                              let ArrayHeartrate = [
                                 "<p class='style warning'> Nhịp Tim : Chậm  </p>",
                                 "<p class='style'> Lưu ý(Note): Với những người có thể lực tốt nhịp tim dưới 60 không gây ra vấn đề sức khỏe  </p>",    
-                                "<p class='style        '> Nhịp Tim : Bình thường </p>",
+                                "<p class='style'> Nhịp Tim : Bình thường </p>",
                                 "<p class='style warning'> Nhịp tim : Nhanh(Nếu > 100 khi nghỉ ngơi) </p>"
                               
                              ]
