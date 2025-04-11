@@ -30,6 +30,8 @@ b {
 
 }
 a {
+    display: inline-block;
+    padding: 10px;
     text-decoration: none;
     color: rgb(255, 252, 252);
     font-weight: 600;
@@ -120,15 +122,20 @@ header .card__header--card2-list {
          
          transition: all 1s ease;       /* transition không áp dụng với display: block */
          position: absolute;
-         bottom: 14.5rem;
+         bottom: 1rem;
          margin-left: 40rem;
         max-width: 40%;
         display: none;
+      
 
+}
+.boxList{
+    border-radius: 20px;
 }
 #Card__Header-Nav-computer {
     background-color: black;
     width: 30rem;
+    padding: 60px;
 }
 
 .card__header--card2 li:hover #Card__Header-Nav-computer {

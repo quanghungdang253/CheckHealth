@@ -67,6 +67,7 @@ body{
 .Header__Form {
         display: flex;
 }
+
 .Header__input {
         border-radius: 20px;
         background: transparent;
@@ -75,7 +76,7 @@ body{
         font-size: medium;
         height: 20px;
         padding: 10px 10px;
-        max-width: 100px
+        max-width: 210px
 }
 .Header__button--btn {
         background:transparent;
@@ -342,7 +343,7 @@ body{
         } 
 
         .Header__input {
-                width: 60%;
+                width: 40%
         }
         
   
