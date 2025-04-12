@@ -33,7 +33,7 @@ b {
 }
 a {
     display: inline-block;
-    padding: 10px;
+   
     text-decoration: none;
     color: rgb(255, 252, 252);
     font-weight: 600;
@@ -124,10 +124,10 @@ header .card__header--card2-list {
          
          transition: all 1s ease;       /* transition không áp dụng với display: block */
          position: absolute;
-         bottom: 1rem;
-         margin-left: 40rem;
+         bottom: 9rem;
+         margin-left: 28rem;
         max-width: 40%;
-        display: none;
+        /* display: none; */
       
 
 }
@@ -136,7 +136,7 @@ header .card__header--card2-list {
 }
 #Card__Header-Nav-computer {
     background-color: black;
-    width: 30rem;
+   
     padding: 60px;
 }
 
@@ -147,7 +147,8 @@ header .card__header--card2-list {
 
 header .card__header--card2 {
     margin-top: 4rem;
-    font-size: 2rem;
+  padding: 10px;
+    font-size: 14px;
 }
 
 header .card__header--card2 ol {
@@ -169,7 +170,7 @@ header .card__header--card2 ol li a{
 }
 .card__header--card2 #link::after{
         content: '👉🏻';
-        font-size: 4rem;
+       
         margin-left: 3%;
 }
 
@@ -187,12 +188,16 @@ header #Card__Header-Nav-mobie {
    }
 
 .card__header--card2 #Habit {
+    font-size: 14px;
     transition: all 1s ease;         /* transition không áp dụng với display: block */
     position: absolute;
+    border-radius: 20px;
+    padding: 20px;
     bottom: 10.5rem;
     margin-left: 20em;
     background-color: black;
     display: none;
+
 }
 
 
@@ -246,7 +251,7 @@ header #Card__Header-Nav-mobie {
         width: 19em;
      }
      .card__header--card2 li:hover #Card__Header-Nav-computer {
-        display: none;
+      
      }
 
 }
