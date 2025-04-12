@@ -224,10 +224,7 @@ function Reset(){
 }
 
 
-// phần hình ảnh quảng cáo 
-
-
-        
+// phần hình ảnh quảng cáo  
 let Clause = document.getElementById("Choose_clause");
 Clause.addEventListener("click",function(){
 if(Clause.checked === true)

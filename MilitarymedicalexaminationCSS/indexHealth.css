@@ -104,11 +104,12 @@ p {
 
 .body {
   margin-top: 3cm;
-  margin: 3cm 3cm;
+margin-left: 10%;
+margin-right: 10%;
   font-size: 1.6rem;
   font-family: 'Times New Roman', Times, serif;
 
-  margin-right: auto;
+ 
  
 }
 .body .Wrappercontent .content {
