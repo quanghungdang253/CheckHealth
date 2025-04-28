@@ -118,7 +118,7 @@ header .card__header .card__header--title {
 
 
 header .card__header--card1 {
-    text-align: center; 
+    /* text-align: center;  */
 }
 header .card__header--card2-list {
          
@@ -127,7 +127,7 @@ header .card__header--card2-list {
          bottom: 9rem;
          margin-left: 28rem;
         max-width: 40%;
-        /* display: none; */
+        display: none;
       
 
 }
