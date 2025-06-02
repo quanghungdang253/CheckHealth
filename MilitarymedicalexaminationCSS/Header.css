@@ -8,6 +8,54 @@ html {
         
 }
 
+.chil1 {
+                font-size: 24px;
+                font-family: 'Times New Roman', Times, serif;
+                color: red;
+                margin-bottom: 1rem;
+}
+.chil2 {
+        color: rgb(197, 240, 4);
+          font-family: 'Times New Roman', Times, serif; 
+         font-size: 24px;
+                margin-bottom: 10px;
+}
+.chil2-group {
+                        margin-bottom: 1rem;
+}
+.chil1-member {
+         line-height: 1rem;
+                margin-bottom: 13rem;
+}
+.box-members {
+                        margin-bottom: 3rem;
+}
+
+.mainTitle {
+        
+}
+.titles {
+        border-radius: 999px;
+        background-color: yellow;
+        padding: 10px 10px;
+        font-size: 24px;
+        font-weight: 900;
+        font-family: 'Times New Roman', Times, serif;
+        animation:  convertColor 2s ease-in-out infinite;
+}
+@keyframes convertColor {
+        0% {
+                color: red;
+                background-color: aliceblue;
+        }
+            25%  { color: orange; 
+                 background-color: rgb(10, 141, 255);
+        }
+      50%  { color: green; 
+  background-color: rgb(0, 251, 71);}
+      75%  { color: blue; }
+      100% { color: purple; }
+}
 body{
      background-image: url('../Image/istockphoto-1693321583-2048x2048.jpg');
      background-position-x: -250rem;
@@ -54,6 +102,7 @@ body{
 }
 .Header__search {
         display: flex;
+        align-items: center;
       
 }
 .Header__search--image {
@@ -156,7 +205,7 @@ body{
         border-radius: 4rem;
 }
 .Header__search {
-        margin-top: 7%;
+        margin-top: 3%;
 }
 .Header__input {
         width: 90%;
@@ -421,6 +470,32 @@ body{
         color: red;
 }
 @media screen and (max-width: 1200px){
+        .chil1 {
+                width: 100px;
+                font-size: 18px;
+                font-family: 'Times New Roman', Times, serif;
+                color: red;
+                margin-bottom: 1rem;
+}
+.chil1-member {
+         line-height: 1rem;
+                margin-bottom: 11rem;
+}
+        .chil2 {
+        color: rgb(197, 240, 4);
+          font-family: 'Times New Roman', Times, serif; 
+         font-size: 18px;
+                margin-bottom: 10px;
+}
+        .titles {
+        border-radius: 999px;
+        background-color: yellow;
+       text-align: center;
+        font-size: 15px;
+        font-weight: 900;
+        font-family: 'Times New Roman', Times, serif;
+        animation:  convertColor 2s ease-in-out infinite;
+}
         .Wrapper-Result {
                 margin-right: 0rem;
         } 
